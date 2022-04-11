@@ -1,0 +1,135 @@
+/* Add mobile styles for the component here.  */
+        
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
+RadSideDrawer .drawerContentText {
+    font-size: 15;
+}
+
+RadSideDrawer .drawerContentButton {
+    horizontal-align: left;
+}
+
+.sideStackLayout {
+    font-family: Poppins-Regular;
+    background: white;
+    color: #212121;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-drawer-container {
+    padding: 20, 0, 0;
+    background-color: var(--primary);
+}
+
+.brand-navigation-container {
+    background-color: white;
+    border-radius: 20dp 20dp 0 0;
+}
+
+.brand-drawerpic-container {
+    padding: 0% 15%;
+}
+
+.profile-name {
+    color: white;
+    font-size: 14px;
+}
+
+.profile-email {
+    color: white;
+    font-size: 12dp;
+}
+
+.brand-drawerpic-container Image {
+    height: 100dp;
+    width: 100dp;
+    border-color: var(--secondary);
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 100%;
+}
+
+.sideTitleStackLayout {
+    padding-top: 7;
+    text-align: left;
+    vertical-align: center;
+}
+
+.sideLabel {
+    padding: 10;
+    padding-left: 15%;
+    text-align: left;
+}
+
+.sideLightGrayLabel {
+    background-color: white
+}
+
+.activeL {
+    color: var(--primary);
+    font-size: 16dp;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.page-icon {
+    font-size: 20dp;
+    color: var(--secondary);
+}
+
+.logout-icon {
+    font-size: 20dp;
+    color: #ffffff;
+}
+
+.logout-name {
+    font-size: 14dp;
+    color: white;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.page-name {
+    font-size: 14dp;
+    /* color: black; */
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.drawSideLabel {
+    font-size: 13dp;
+}
+
+.brand-drawerbottom-container .app-version {
+    font-size: 14dp;
+    color: white;
+    text-align: center;
+}
+
+.bottom-label {
+    padding: 10;
+    text-align: center;
+    border-right-width: 2px;
+    border-right-color: white;
+    border-style: solid;
+}
+
+.text {
+    font-family: Open Sans, SemiBold;
+    font-size: 16dp;
+}
+
+.main {
+    background-color: #256EEB;
+}
+
+.main-1 {
+    padding: 30% 0 30px 30px;
+    height: 100%;
+}

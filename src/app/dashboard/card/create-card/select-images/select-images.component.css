@@ -1,0 +1,41 @@
+.fab-button {
+  height: 70;
+  width: 150;
+  margin: 15;
+  color: #FFFFFF;
+  background-color: var(--secondary);
+  horizontal-align: right;
+  vertical-align: bottom;
+}
+
+.btna {
+  height: 50;
+  border-radius: 5;
+  color: var(--secondary);
+  background-color: white;
+}
+
+.btnb {
+  height: 50;
+  border-radius: 5;
+  color: var(--secondary);
+  background-color: white;
+}
+
+.image-gallery {
+  width: 95%;
+  height: 117dp;
+  object-fit: fill;
+  border-width: 2px;
+  border-color: rgb(224, 224, 224);
+  border-style: solid;
+  /* background-color: rgb(207, 204, 204); */
+  /* padding: 2%; */
+  margin: 7dp;
+}
+
+.brand-image-view-container {
+  width: 100%;
+  /* background-color: rgb(236, 235, 203); */
+  padding: 5% 10%;
+}

@@ -1,0 +1,145 @@
+/* Add mobile styles for the component here.  */
+.active-switch {
+    color: green;
+}
+
+.inactive-switch {
+    color: var(--third);
+}
+
+.main {
+    background-color: #256EEB;
+}
+
+.main-1 {
+    padding: 30% 0 30px 30px;
+    height: 100%;
+}
+
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
+.text {
+    font-family: Open Sans, SemiBold;
+    font-size: 16dp;
+}
+
+
+/* 
+.textfield-title {
+    font-size: 14dp;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+} */
+
+.brand-addvieo-container .add-video .username TextField {
+    /* font-family: Open Sans, SemiBold; */
+    font-size: 14dp;
+    border-color: gray;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    border-width: 2px;
+    height: 60dp;
+    /* padding-left: 40px; */
+    width: 100%;
+    padding: 0px 40px;
+}
+
+.brand-addvieo-container .add-video {
+    background-color: white;
+    border-top-left-radius: 20;
+    border-top-right-radius: 20;
+    height: 100%;
+    padding: 10dp 15dp;
+}
+
+.backbutton {
+    font-size: 20dp;
+    text-align: left;
+    color: black;
+}
+
+.video-preview {
+    padding: 15dp 0dp;
+}
+
+.video-preview Label {
+    font-size: 14dp;
+    color: #525252;
+    font-weight: 600;
+}
+
+.video-preview Image {
+    border-radius: 10%;
+    border-width: 2px;
+    border-color: rgb(216, 212, 212);
+}
+
+.save-button {
+    background-color: var(--secondary);
+    text-align: center;
+    font-size: 14dp;
+    border-radius: 10;
+    font-weight: 600;
+    /* margin: 3% 3%; */
+    width: 40%;
+    color: white;
+}
+
+.reset-button {
+    background-color: white;
+    text-align: center;
+    font-size: 16dp;
+    font-weight: 600;
+    border-radius: 10;
+    /* margin: 3% 3%; */
+    width: 40%;
+    color: black;
+    text-decoration: underline;
+}
+
+.add-new-label {
+    border-bottom: rgb(216, 212, 212);
+    border-bottom-width: 2px;
+}
+
+.add-new-label Label {
+    font-size: 14dp;
+    color: #525252;
+    font-weight: 600;
+}
+
+.add-images-label Label {
+    font-size: 14dp;
+    color: #525252;
+    font-weight: 600;
+}
+
+.brand-addimage-container .add-image {
+    height: 100dp;
+    width: 100dp;
+    color: #212121;
+    font-size: 12dp;
+    font-weight: normal;
+    background-color: rgb(238, 236, 236);
+    /* border-width: 1px; */
+    /* border-color: rgb(216, 212, 212); */
+    border-radius: 10dp;
+    margin: 10dp 0;
+    text-align: center;
+}
+
+.video-priview-desc TextView {
+    /* font-family: Open Sans, SemiBold; */
+    font-size: 14dp;
+    border-color: gray;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    border-width: 2px;
+    height: 100dp;
+    /* padding-left: 40px; */
+    width: 100%;
+    padding: 20px 40px;
+}

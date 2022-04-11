@@ -1,0 +1,44 @@
+<ScrollView style="background-color: white;">
+    <GridLayout rows="250,80,80,80 ,150" class="firstgrid">
+
+
+        <!-- <StackLayout row="0">
+            <Label text="&#xf060;" class="fas backarrow" (tap)="Goback()"></Label>
+        </StackLayout> -->
+        <StackLayout row="0" class="brand-logo-container" verticalAlignment="center">
+            <Image src="~/assets/images/brand-logo.png" verticalAlignment="center"></Image>
+        </StackLayout>
+
+        <StackLayout row="1" class="" horizontalAlignment="center">
+            <GridLayout columns="*,2*" class="signin-button email" (tap)="onsignup()">
+
+                <Label col="0" text="&#xf0e0;" verticalAlignment="center" class="far icon "></Label>
+                <Label col="1" text="Sign up with E-mail" verticalAlignment="center" class="email-label" horizontalAlignment="left"></Label>
+
+            </GridLayout>
+        </StackLayout>
+        <StackLayout row="2" horizontalAlignment="center">
+            <GridLayout columns="*,2*" class="signin-button facebook" (tap)="registerwithfb()">
+
+                <Label col="0" text="&#xf39e;" verticalAlignment="center" class="fab icon1"></Label>
+                <Label col="1" text=" Sign up with Facebook" verticalAlignment="center" class="face-label" horizontalAlignment="left"></Label>
+
+            </GridLayout>
+        </StackLayout>
+        <StackLayout row="3" horizontalAlignment="center">
+            <GridLayout columns="*,2*" class="signin-button google" (tap)="registerwithgoogle()">
+
+                <Label col="0" text="&#xf1a0;" class="far icon1" verticalAlignment="center"></Label>
+                <Label col="1" text="Sign up with Google" class="face-label" horizontalAlignment="left" verticalAlignment="center"></Label>
+            </GridLayout>
+
+        </StackLayout>
+
+        <StackLayout row="4" class=" accounttext" orientation="horizontal" horizontalAlignment="center" verticalAlignment="bottom">
+            <Label text="Already have an account?" class="signinwithacc"> </Label>
+            <Label text="  Sign In" (tap)="onsignin()" class="signinwithacc1"> </Label>
+
+        </StackLayout>
+
+    </GridLayout>
+</ScrollView>

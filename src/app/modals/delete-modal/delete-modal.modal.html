@@ -1,0 +1,26 @@
+<!-- >> modal-view-actionbar-html -->
+
+
+<!-- <StackLayout backgroundColor="green" class="page">
+    <Label class="my-label" style="text-align: center;" text="Modal view with ActionBar" textWrap="true"></Label>
+    <Button text="CLOSE MODAL" (tap)="onClose()"></Button>
+</StackLayout> -->
+<!-- << modal-view-actionbar-html -->
+
+
+
+
+<!-- >> modal-view-actionbar-html -->
+<StackLayout horizontalAlignment="center" style="background-color:transparent;">
+    <GridLayout rows="*,*" height="150dp" orienation="vertical" width="90%" style=" border-width: 2dp; border-color: rgb(226, 222, 222); border-style: solid; background-color: rgb(255, 255, 255);">
+
+        <Label row="0" class="custom-font" verticalAlignment="center" style="text-align:center; font-size:14dp; color: black;" width="80%" [text]="deleteText" textWrap="true"></Label>
+        <GridLayout row="1" columns="auto,auto" orientation="horizontal" horizontalAlignment="center" style="padding:10dp;">
+            <Button horizontalAlignment="left" col="0" text=" Delete" (tap)="onClose(1)" class="custom-font" style="border-radius: 10dp; border-width: 2dp; border-color: rgb(226, 222, 222); border-style: solid; height:40dp; background-color: white; color: black;  font-size: 12dp;
+            font-weight: 600;color: red;"></Button>
+            <Button horizontalAlignment="right" col="1" text="Cancel" class="custom-font" (tap)="onClose(0)" style=" border-radius: 10dp; height:40dp; border-width: 2dp; border-color: rgb(226, 222, 222); border-style: solid; color: white;  font-size: 12dp;background-color: #256EEB;
+            font-weight: 600;"></Button>
+        </GridLayout>
+
+    </GridLayout>
+</StackLayout>

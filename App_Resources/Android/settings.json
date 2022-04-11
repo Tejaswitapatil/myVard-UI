@@ -1,0 +1,5 @@
+{
+  "appId": "com.narmware.myvcard",
+  "minSdkVersion": 21,
+  "targetSdkVersion": 30
+}

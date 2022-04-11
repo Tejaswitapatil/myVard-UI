@@ -1,0 +1,36 @@
+<AbsoluteLayout width="100%" height="100%">
+
+    <ScrollView backgroundColor="white" top="0" left="0" width="100%" height="100%">
+        <!-- <StackLayout>
+            <YoutubePlayer  apiKey="AIzaSyCDH3BGQZT2ebUfSE8D3I8NLqaCPu4FRh0" src="vEG4qNW33mA" height="250" width="100%" backgroundColor="gray"></YoutubePlayer>
+        </StackLayout> -->
+
+        <StackLayout class="brand-video-container">
+            <CardView class="video-card" *ngFor="let video of gallery">
+                <GridLayout orientation="vertical" columns="auto,*,20" rows="auto,auto,auto" class="video-gallery">
+                    <AbsoluteLayout row="0" colSpan="3">
+                        <Image (tap)="onvideoplay(video)" width="100%" [src]="getPreviewImage(video.link)" class="videoimage"></Image>
+                        <!-- <Image style="height: 50%;width: 50%;" src="~/assets/images/brand-logo.png" class="videoimage"></Image> -->
+                        <!-- <Label left='170' top="100" style="color: blue;font-size: 50dp;" text="&#xf144;" class="far" verticalAlignment="center"></Label> -->
+                        <GridLayout style="background-color: transparent;text-align: center;" width="100%" top="120">
+                            <Label (tap)="onvideoplay(video)" style="color: rgb(231, 229, 229);font-size: 50dp;" text="&#xf144;" class="far" verticalAlignment="center"></Label>
+                        </GridLayout>
+                    </AbsoluteLayout>
+
+                    <!-- <YoutubePlayer row="0" colSpan="3" apiKey="AIzaSyCDH3BGQZT2ebUfSE8D3I8NLqaCPu4FRh0" src="{{video.videoPath}}" height="250" width="100%"></YoutubePlayer> -->
+                    <Label row="1" col="0" text="Name:" class="name" verticalAlignment="center"></Label>
+                    <Label row="1" col="1" class="video-name custom-font" text=" {{video.title}}" textWrap="true" verticalAlignment="center"></Label>
+                    <Label row="2" col="0" text="Video link :  " verticalAlignment="center" class="videolink"></Label>
+                    <Label row="2" col="1" class="videoLink-name custom-font" textwrap="true" text="{{video.link}}" verticalAlignment="center"></Label>
+                    <Label col="2" rowspan="2" row="1" class="fas edit-icon" text="&#xf303;" (tap)="onEdit(video._id)"></Label>
+                </GridLayout>
+            </CardView>
+        </StackLayout>
+    </ScrollView>
+
+    <AbsoluteLayout left="0" top="0" width="100%" height="100%">
+        <FAB (tap)="OnTap()" #fab text="&#xf067;" [left]="left" [top]="top" rippleColor="#f1f1f1" class="fab-button far">
+        </FAB>
+    </AbsoluteLayout>
+
+</AbsoluteLayout>

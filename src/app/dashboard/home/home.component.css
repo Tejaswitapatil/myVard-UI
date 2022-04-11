@@ -1,0 +1,60 @@
+.main {
+  background-color: #256EEB;
+}
+
+.main-1 {
+  padding: 30% 0 30px 30px;
+  height: 100%;
+}
+
+.fab-button {
+  height: 70;
+  width: 70;
+  margin: 15;
+  color: #FFFFFF;
+  background-color: var(--primary);
+  horizontal-align: right;
+  vertical-align: bottom;
+}
+
+.btna {
+  color: #256EEB;
+  background-color: white;
+}
+
+.btnb {
+  color: #256EEB;
+  background-color: white;
+}
+
+.brand-home-container {
+  padding: 15dp;
+}
+
+.brand-home-container .home-container Label {
+  font-size: 18dp;
+  color: black;
+  text-align: left;
+}
+
+.profile-container {
+  background-color: var(--primary);
+  border-radius: 15dp;
+  width: 50%;
+  border-width: 5dp;
+  border-color: rgb(255, 255, 255);
+}
+
+.profile-container Image {
+  width: 100%;
+  border-radius: 15dp 15dp 40dp 40dp;
+  height: 150dp;
+}
+
+.name-container Label {
+  font-size: 14dp;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 10dp 0;
+}

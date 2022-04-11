@@ -1,0 +1,170 @@
+    ScrollView {
+        margin-top: 5%;
+    }
+    
+    Label {
+        color: black;
+    }
+    /* .brand-logo-container {} */
+    
+    .brand-logo-container Image {
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        height: 100dp;
+        width: 100dp;
+    }
+    /* .brand-name-container {
+    padding: 0px 60px;
+} */
+    
+    .brand-textfield-container {
+        padding: 0px 10px;
+    }
+    
+    .textfield-title {
+        font-size: 14dp;
+        color: #797979;
+        font-weight: 600;
+    }
+    
+    .brand-textfield-container .username TextField {
+        /* font-family: Open Sans, SemiBold; */
+        border-color: gray;
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
+        border-width: 2px;
+        height: 60dp;
+        /* padding-left: 40px; */
+        width: 100%;
+        padding: 0px 40px;
+    }
+    
+    .brand-textfield-container .password TextField {
+        /* font-family: Open Sans, SemiBold; */
+        font-size: 14dp;
+        border-color: transparent;
+        color: black;
+        height: 60dp;
+        /* padding-left: 10px; */
+        /* padding-right: 40px; */
+        width: 100%;
+        margin-top: 20dp;
+        padding: 0px 40px;
+    }
+    
+    .brand-textfield-container .password {
+        /* font-family: Open Sans, SemiBold; */
+        font-size: 14dp;
+        border-color: gray;
+        color: black;
+        border-radius: 20px;
+        border-width: 2px;
+        height: 60dp;
+        margin: 20px 25px;
+        padding-right: 35px;
+        width: 100%;
+    }
+    
+    .brand-forgot-container {
+        margin: 10px 0;
+        padding: 0px 0px;
+    }
+    
+    .brand-forgot-container Label {
+        font-size: 12dp;
+        color: var(--fourth);
+        width: 100%;
+    }
+    
+    .h2 {
+        /* font-family: Open Sans, SemiBold; */
+        font-weight: 700;
+        font-size: 18dp;
+        color: rgb(17, 17, 17);
+    }
+    
+    .text {
+        /* font-family: Open Sans, SemiBold; */
+        font-size: 16dp;
+        color: #525252;
+        font-weight: 600;
+    }
+    
+    .firstgrid {
+        padding: 30% 20%;
+    }
+    
+    .signin-button {
+        background-color: var(--primary);
+        text-align: center;
+        color: white;
+        font-size: 16dp;
+        font-weight: 600;
+        border-radius: 10;
+        margin-top: 15%;
+        width: 100%;
+    }
+    
+    .brand-signin-container {
+        padding: 5% 0%;
+    }
+    
+    .brand-social-container {
+        width: 100%;
+    }
+    
+    .signinwith {
+        font-size: 12px;
+        margin: 10% 0%;
+    }
+    
+    .social-icon {
+        border-radius: 10;
+        color: white;
+        padding: 10% auto;
+        align-items: center;
+        text-align: center;
+        height: 45dp;
+        width: 100;
+    }
+    
+    .otp {
+        font-size: 16dp;
+        font-weight: 600;
+    }
+    
+    .fb {
+        font-size: 24dp;
+        font-weight: 500;
+        background-color: #1877F2;
+    }
+    
+    .google {
+        background-color: #F5F5F5;
+    }
+    
+    .google image {
+        height: 24dp;
+        width: 24dp;
+    }
+    
+    .signinwithacc {
+        font-size: 14px;
+        margin: 10% 0%;
+        font-weight: 600;
+    }
+    
+    .signinwithacc1 {
+        font-size: 16dp;
+        margin: 10% 0%;
+        color: var(--secondary);
+        font-weight: 700;
+    }
+    
+    .accounttext {
+        border-top-width: 2px;
+        border-color: #d4d1d1;
+        width: 80%;
+        border-style: solid;
+    }

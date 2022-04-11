@@ -1,0 +1,56 @@
+.fab-button {
+  height: 70;
+  width: 150;
+  margin: 15;
+  background-color: var(--secondary);
+  color: #FFFFFF;
+  horizontal-align: right;
+  vertical-align: bottom;
+}
+
+/* fab */
+
+.brand-video-container {
+  padding: 15%;
+}
+
+.video-gallery {
+  border-width: 3px;
+  border-color: lightgray;
+  margin: 10dp 0dp;
+  padding: 3dp;
+  border-radius: 10%;
+}
+
+.videoimage {
+  border-radius: 10%;
+}
+
+.brand-video-container .video-card .video-gallery .name {
+  padding: 5dp 3dp;
+  font-size: 14dp;
+  font-weight: 600;
+}
+
+.brand-video-container .video-card .video-gallery .video-name {
+  font-size: 14dp;
+  padding: 3dp 0dp;
+  padding: 5dp 3dp;
+}
+
+.brand-video-container .video-card .video-gallery .videolink {
+  font-size: 14dp;
+  font-weight: 600;
+  padding: 5dp 3dp;
+}
+
+.brand-video-container .video-card .video-gallery .videoLink-name {
+  font-size: 14dp;
+  padding: 5dp 3dp;
+}
+
+.brand-video-container .video-card .video-gallery .edit-icon {
+  padding: 5dp 0dp;
+  font-size: 14dp;
+  color: black;
+}

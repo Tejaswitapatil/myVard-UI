@@ -1,0 +1,27 @@
+<StackLayout horizontalAlignment="center" style="background-color:transparent;">
+    <GridLayout rows="*,60" height="350dp" marginTop="25%" padding="15dp" verticalAlignment="center" orienation="vertical" width="90%" style=" border-width: 2dp; border-color: rgb(226, 222, 222); border-style: solid; background-color: rgb(255, 255, 255);">
+
+
+        <GridLayout row="0" rows="20,auto" orientation="vertical" class="video-preview">
+            <Label row="0" text="Date of Birth:" class="custom-font textfield-title" horizontalAlignment="left"></Label>
+            <DatePicker row="1" year="1991" month="2" day="10" class="date-picker" [minDate]="minDate" [maxDate]="maxDate" (dateChange)="onDateChanged($event)" (dayChange)="onDayChanged($event)" (monthChange)="onMonthChanged($event)" (yearChange)="onYearChanged($event)"
+                (loaded)="onDatePickerLoaded($event)" verticalAlignment="center" style="
+               
+                    background-color: rgb(246, 244, 244);
+                    border-color: rgb(226, 224, 224);
+                    border-width: 2;
+                    border-radius: 10dp;
+                    color: black;
+                    vertical-align: middle;
+                    margin-top: 5dp;
+                ">
+            </DatePicker>
+        </GridLayout>
+        <GridLayout row="1" columns="*" orientation="horizontal" horizontalAlignment="center" style="padding:10dp;">
+            <Button horizontalAlignment="center" col="0" text="OK" (tap)="onClose(1)" class="custom-font" style="border-radius: 10dp; border-width: 2dp; border-color: rgb(226, 222, 222); border-style: solid; height:50dp; width:150dp;background-color: #ED7200; color: white;  font-size: 12dp;
+            font-weight: 700;"></Button>
+
+        </GridLayout>
+
+    </GridLayout>
+</StackLayout>

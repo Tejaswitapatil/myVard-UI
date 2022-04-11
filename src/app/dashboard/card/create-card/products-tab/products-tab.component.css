@@ -1,0 +1,109 @@
+/* Add mobile styles for the component here.  */
+
+button {
+  font-size: 15;
+  horizontal-align: center;
+}
+
+RadSideDrawer .drawerContentText {
+  font-size: 15;
+}
+
+RadSideDrawer .drawerContentButton {
+  horizontal-align: left;
+}
+
+.sideStackLayout {
+  font-family: Poppins-Regular;
+  background: white;
+  color: #212121;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20;
+  margin-left: -10;
+  margin-right: -10;
+}
+
+.sideTitleStackLayout {
+  padding-top: 7;
+  text-align: left;
+  vertical-align: center;
+}
+
+.sideLabel {
+  padding: 10;
+  padding-left: 45;
+  
+}
+
+.sideLightGrayLabel {
+  background-color:white
+}
+
+.activeL {
+  color:#ffa000;  
+}
+
+.page-icon {
+  font-size: 18dp;
+  color:  #ffa000;
+}
+
+.drawSideLabel {
+  font-size: 13dp;
+}
+
+.fab-button {
+  height: 70;
+  width: 70; 
+  margin: 15;
+  background-color: #256EEB;
+  color: #FFFFFF;
+  horizontal-align: right;
+  vertical-align: bottom;
+}
+
+.text{
+  font-family: Open Sans, SemiBold;
+  font-size: 16dp;
+}
+
+TabStripItem.tabstrip:active {
+  /* background-color: #256EEB; */
+  /* font-size: 16dp; */
+  /* color: white; */
+}
+
+TabStripItem.tabstrip {
+  /* background-color: white; */
+  /* font-size: 12dp; */
+  /* color: black; */
+}
+
+
+TabStrip {
+  selected-item-color: #256EEB;
+  un-selected-item-color: white;
+  highlight-color: #256EEB;
+}
+
+/* TabStripItem.tab {
+  background-color: blue;
+  color: white;
+}
+
+TabStripItem.tab:active {
+  background-color: red;
+  color: black;
+} */
+
+.main{
+  background-color: #256EEB;
+  
+}
+
+.main-1{
+  padding: 30% 0 30px 30px;
+  height: 100%;
+}

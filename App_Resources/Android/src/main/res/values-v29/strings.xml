@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My V Card</string>
+    <string name="title_activity_kimera">My V Card</string>
+
+    <string name="facebook_app_id">5195066437227865</string>
+</resources>

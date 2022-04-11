@@ -1,0 +1,15 @@
+<!-- >> modal-view-actionbar-html -->
+<GridLayout verticalAlignment="center" sttyle=" border-radius: 15dp; border-width: 2dp; border-color: gray; border-style: solid; background-color: white;">
+    <StackLayout rows="auto,auto" height="25%" width="100%" horizotalAlignment="center" style="padding: 20dp;">
+        <Label row="0" class="custom-font" style="text-align: center; color: black; " text="Hey, you have some unsaved changes, do you want to save?" textWrap="true"></Label>
+        <GridLayout row="1" orientation="horizontal" style="padding:10dp;">
+            <Button horizontalAlignment="left" text=" Cancel" (tap)="onClose()" class="custom-font" style="border-radius: 5dp;  height:35dp; background-color: white; color: black;  font-size: 12dp;
+            font-weight: 600;"></Button>
+            <Button horizontalAlignment="right" text="Delete" class="custom-font" (tap)="onClose()" style=" border-radius: 5dp; height:35dp; color: white;  font-size: 12dp;
+            font-weight: 600;"></Button>
+        </GridLayout>
+
+    </StackLayout>
+
+</GridLayout>
+<!-- << modal-view-actionbar-html -->

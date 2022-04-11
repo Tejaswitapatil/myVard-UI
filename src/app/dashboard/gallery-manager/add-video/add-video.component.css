@@ -1,0 +1,91 @@
+
+
+.text {
+    font-family: Open Sans, SemiBold;
+    font-size: 16dp;
+}
+
+.brand-addvieo-container .add-video .username TextField {
+    /* font-family: Open Sans, SemiBold; */
+    font-size: 14dp;
+    border-color: gray;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    border-width: 2px;
+    height: 60dp;
+    /* padding-left: 40px; */
+    width: 100%;
+    padding: 0px 40px;
+}
+
+.brand-addvieo-container .add-video .video-link TextField {
+    font-size: 14dp;
+    border-color: gray;
+    color: rgb(0, 0, 0);
+    border-width: 0px 0px 2px 0px;
+    margin-left: 40dp;
+    padding-left: 10dp;
+    margin-top: 20dp;
+    width: 100%;
+    height: 100%;
+}
+
+.brand-addvieo-container .add-video .youtube {
+    background-color: #FF0000;
+    border-radius: 100%;
+    font-size: 24dp;
+    height: 40dp;
+    width: 40dp;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6dp 0 0;
+}
+
+.brand-addvieo-container .add-video {
+    background-color: white;
+    height: 100%;
+    padding: 10dp 15dp;
+}
+
+.backbutton {
+    font-size: 20dp;
+    text-align: left;
+    color: black;
+}
+
+.video-preview {
+    padding: 15dp 0dp;
+}
+
+.video-preview Label {
+    font-size: 12dp;
+    color: black;
+}
+
+.video-preview Image {
+    border-radius: 10%;
+}
+
+.save-button {
+    background-color: var(--secondary);
+    text-align: center;
+    font-size: 14dp;
+    border-radius: 10;
+    font-weight: 600;
+    /* margin: 3% 3%; */
+    width: 40%;
+    color: white;
+}
+
+.reset-button {
+    background-color: white;
+    text-align: center;
+    font-size: 16dp;
+    font-weight: 600;
+    border-radius: 10;
+    /* margin: 3% 3%; */
+    width: 40%;
+    color: black;
+    text-decoration: underline;
+}

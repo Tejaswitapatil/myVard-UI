@@ -1,0 +1,67 @@
+<!-- <ScrollView>
+    <StackLayout>
+
+        <StackLayout
+            style="background-color: white;border-top-left-radius: 20;border-top-right-radius: 20;height: 100%;">
+
+
+            <WrapLayout orientation="horizontal" class="brand-image-view-container">
+
+                <Image *ngFor="let image of gallery" src="{{image.imagePath}} " (tap)="OnTap(image.imagePath)"
+                    class="image-gallery"></Image>
+
+            </WrapLayout>
+
+
+        </StackLayout>
+
+
+    </StackLayout>
+</ScrollView> -->
+
+<!-- <ScrollView style="background-color: aqua;">
+    <WrapLayout orientation="horizontal" class="brand-image-view-container">
+
+        <Image *ngFor="let image of gallery" src="{{image.imagePath}} " (tap)="OnTap()" class="image-gallery"></Image>
+
+
+    </WrapLayout>
+</ScrollView> -->
+
+<!-- <AbsoluteLayout>
+    <Button *ngIf="_isFabOpen" text="&#xf07b; Select images" #btnb left="220" top="100" class="fab-button btna far"></Button>
+    <Button *ngIf="_isFabOpen" text="&#xf030; Take photo" #btna left="220" top="100" class="fab-button btna far"></Button>
+                        
+    <FAB (tap)="displayOptions()" #fab text="&#xf067;" [left]="left" [top]="top" rippleColor="#f1f1f1"
+        class="fab-button far">
+    </FAB>
+</AbsoluteLayout> -->
+<AbsoluteLayout width="100%" height="100%">
+
+    <ScrollView backgroundColor="white" top="0" left="0" width="100%" height="100%">
+
+        <RadListView [items]="gallery">
+            <ng-template tkListItemTemplate let-item="item" let-i="index">
+                <GridLayout class="listItemTemplateGrid" class="brand-image-view-container">
+                    <Image [src]="item.link" (tap)="OnTap(i)" class="image-gallery"></Image>
+                </GridLayout>
+                <!-- <AbsoluteLayout class="listItemTemplateGrid" class="brand-image-view-container">
+                    <Image [src]="item.link" (tap)="OnTap(i)" (longPress)="onLongPress(i)" class="image-gallery"></Image>
+                    <CheckBox top="10" left="10" [checked]="item.selected" (checkedChange)="checkImage(i,item.selected)" *ngIf="showCheckBox"></CheckBox>
+                </AbsoluteLayout> -->
+            </ng-template>
+
+            <ListViewStaggeredLayout tkListViewLayout scrollDirection="Vertical" spanCount="3"></ListViewStaggeredLayout>
+        </RadListView>
+
+    </ScrollView>
+
+    <AbsoluteLayout left="0" top="0" width="100%" height="100%">
+        <Button *ngIf="_isFabOpen" text="&#xf07b; Select images" (tap)="onFilepicker()" #btnb [left]="left2" [top]="top" class="fab-button btna far"></Button>
+        <Button *ngIf="_isFabOpen" text="&#xf030; Take photo" (tap)="onCamera()" #btna [left]="left2" [top]="top" class="fab-button btna far"></Button>
+
+        <FAB (tap)="displayOptions()" #fab text="&#xf067;" [left]="left" [top]="top" rippleColor="#f1f1f1" class="fab-button far">
+        </FAB>
+    </AbsoluteLayout>
+
+</AbsoluteLayout>

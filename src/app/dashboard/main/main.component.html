@@ -1,0 +1,68 @@
+<StackLayout>
+    
+    <Tabs selectedIndex="0" tabsPosition='bottom' (selectedIndexChanged)="onSelectedIndexchanged($event)">
+
+        <TabStrip>
+            <TabStripItem class="tabstrip">
+                <Label text="&#xf015; Home" class="fas"></Label>
+            </TabStripItem>
+            <TabStripItem class="tabstrip">
+                <Label text="&#xf029; Scan" class="fas"></Label>
+            </TabStripItem>
+            <TabStripItem class="tabstrip">
+                <Label text="&#xf2bd; Profile" class="fas"></Label>
+            </TabStripItem>
+            <TabStripItem class="tabstrip">
+                <Label text="&#xf013; Settings" class="fas"></Label>
+            </TabStripItem>
+        </TabStrip>
+    
+        <TabContentItem>
+    
+            <ActionBar [title]="actBarTitle" class="actionbar-container">
+
+                <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+                <ActionItem icon="font://&#xf0f3;" *ngIf="actBarTitle != 'Home'" class="far actionbar-icon" ios.position="left" android.position="actionBar"></ActionItem>
+                <ActionItem icon="font://&#xf304;" (tap)="editProfile()" *ngIf="actBarTitle == 'Profile'" class="fas actionbar-icon" ios.position="left" android.position="actionBar"></ActionItem>
+
+            </ActionBar>
+            <app-home></app-home>
+    
+        </TabContentItem>
+        <TabContentItem>
+            <ActionBar [title]="actBarTitle" class="actionbar-container">
+
+                <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+                <ActionItem icon="font://&#xf0f3;" *ngIf="actBarTitle == 'Home'" class="far actionbar-icon" ios.position="left" android.position="actionBar"></ActionItem>
+                <ActionItem icon="font://&#xf304;" (tap)="editProfile()" *ngIf="actBarTitle == 'Profile'" class="fas actionbar-icon" ios.position="left" android.position="actionBar"></ActionItem>
+
+            </ActionBar>
+            <app-scan></app-scan>
+            
+        </TabContentItem>
+        <TabContentItem>
+            <ActionBar [title]="actBarTitle" class="actionbar-container">
+
+                <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+                <ActionItem icon="font://&#xf0f3;" *ngIf="actBarTitle == 'Home'" class="far actionbar-icon" ios.position="left" android.position="actionBar"></ActionItem>
+                <ActionItem icon="font://&#xf304;" (tap)="editProfile()" *ngIf="actBarTitle != 'Profile'" class="fas actionbar-icon" ios.position="left" android.position="actionBar"></ActionItem>
+
+            </ActionBar>
+            <app-profile></app-profile>
+
+        </TabContentItem>
+        <TabContentItem>
+            <ActionBar [title]="actBarTitle" class="actionbar-container">
+
+                <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+                <ActionItem icon="font://&#xf0f3;" *ngIf="actBarTitle == 'Home'" class="far actionbar-icon" ios.position="left" android.position="actionBar"></ActionItem>
+                <ActionItem icon="font://&#xf304;" (tap)="editProfile()" *ngIf="actBarTitle == 'Profile'" class="fas actionbar-icon" ios.position="left" android.position="actionBar"></ActionItem>
+
+            </ActionBar>
+            <app-settings></app-settings>
+            
+
+        </TabContentItem>
+    
+    </Tabs>
+</StackLayout>

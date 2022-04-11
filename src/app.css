@@ -1,0 +1,134 @@
+@import "~@nativescript/theme/css/core.css";
+.far {
+    font-family: "fontawesome-webfont", "Font Awesome 5 Free";
+    font-weight: 400;
+}
+
+.fas {
+    font-family: Font Awesome 5 Free, fa-solid-900;
+    font-weight: 400;
+}
+
+.fab {
+    font-family: Font Awesome 5 Brands, fa-brands-400;
+    font-weight: 400;
+}
+
+
+/* Add mobile styles for the component here.  */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Medium.ttf');
+    /* IE9 Compat Modes */
+}
+
+.main {
+    --primary: #02AC46;
+    --secondary: #ED7200;
+    --third: #EB2525;
+    --fourth: #0094FF;
+}
+
+TabStrip {
+    --primary: #02AC46;
+    --secondary: #ED7200;
+}
+
+.main,
+.signinwithacc1,
+.signin-button,
+.brand-drawer-container,
+.brand-forgot-container,
+.fab-button {
+    --primary: #02AC46;
+    --secondary: #ED7200;
+    --fourth: #0094FF;
+}
+
+.signin-button {
+    --primary: #02AC46;
+    --secondary: #ED7200;
+}
+
+.actionbar-container {
+    background-color: #02AC46;
+    color: white;
+    font-family: open-sans;
+    font-size: 24dp;
+    font-weight: 700;
+}
+
+.actionbar-icon {
+    font-size: 8dp;
+    color: white;
+}
+
+.textfield-title {
+    font-size: 14dp;
+    color: #797979;
+    font-weight: 600;
+}
+
+.custom-font {
+    font-family: 'Open Sans', OpenSans-Regular, sans-serif;
+}
+
+Button {
+    font-family: 'Open Sans', OpenSans-Regular, sans-serif;
+}
+
+TextField {
+    font-family: 'Open Sans', OpenSans-Regular, sans-serif;
+}
+
+Label {
+    font-family: 'Open Sans', OpenSans-Regular, sans-serif;
+}
+
+.custom-font-bold {
+    font-family: 'Open Sans', OpenSans-Bold, sans-serif;
+}
+
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
+RadSideDrawer .drawerContentText {
+    font-size: 13;
+    padding: 7;
+}
+
+RadSideDrawer .drawerContentButton {
+    margin: 10;
+    horizontal-align: left;
+}
+
+.sideStackLayout {
+    background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%);
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7;
+    padding-top: 30;
+}
+
+.sideTitleStackLayout {
+    padding-top: 7;
+    text-align: left;
+    vertical-align: center;
+}
+
+.sideLabel {
+    padding: 10;
+}
+
+.sideLightGrayLabel {
+    background-color: white
+}
+
+Label {
+    color: #212121;
+}

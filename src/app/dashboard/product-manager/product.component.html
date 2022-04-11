@@ -1,0 +1,47 @@
+<ActionBar title="Product manager" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+
+</ActionBar>
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1 bg-primary-color">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 22;text-align: center;" verticalAlignment="center" (tap)="onToggleMenu()"></Label>
+        <Label text="Product manager" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout >
+
+        <StackLayout style="background-color: white;border-top-left-radius: 20;border-top-right-radius: 20;height: 100%;">
+            <StackLayout row='1'>
+                <Tabs selectedIndex="0" tabsPosition='top' (selectedIndexChanged)="selectedIndexChanged($event)">
+
+                    <TabStrip>
+                        <TabStripItem class="tabstrip">
+                            <Label text="Categories"></Label>
+                        </TabStripItem>
+                        <TabStripItem class="tabstrip">
+                            <Label text="Products"></Label>
+                        </TabStripItem>
+                    </TabStrip>
+
+                    <TabContentItem>
+
+                        <app-categories-view></app-categories-view>
+
+                    </TabContentItem>
+                    <TabContentItem>
+
+                        <app-product-view></app-product-view>
+
+                    </TabContentItem>
+
+
+                </Tabs>
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</GridLayout>

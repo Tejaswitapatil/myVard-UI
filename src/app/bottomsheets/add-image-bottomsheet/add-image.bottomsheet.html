@@ -1,0 +1,24 @@
+<StackLayout class="bottomsheet">
+    <StackLayout class="main brand-bottomsheet-container">
+        <Label text="&#xf30a;" class="fas backbutton" (tap)="onTap(1)"></Label>
+        <StackLayout class="main">
+            <Label [text]="addImageText" class="h2 custom-font-bold"></Label>
+
+            <StackLayout (tap)="onTap(2)" orientation="horizontal" style="border-bottom-color: black;margin: 15px 0;">
+                <Label text="&#xf030;" class="far icon"></Label>
+                <Label text="    Take a photo" class="text custom-font"></Label>
+            </StackLayout>
+
+            <StackLayout (tap)="onTap(3)" orientation="horizontal" style="border-bottom-color: black;margin: 15px 0;">
+                <Label text="&#xf07b;" class="fas icon"></Label>
+                <Label text="    Choose from phone gallery" class="text custom-font"></Label>
+            </StackLayout>
+
+            <StackLayout (tap)="onTap(4)" orientation="horizontal" style="border-bottom-color: black;margin: 15px 0;">
+                <Label text="&#xf07b;" class="fas icon"></Label>
+                <Label text="    Choose from app gallery" class="text custom-font"></Label>
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
+</StackLayout>

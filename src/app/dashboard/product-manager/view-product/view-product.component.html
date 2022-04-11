@@ -1,0 +1,92 @@
+<ActionBar title="View product" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+
+</ActionBar>
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf060;" class="far" color="white" style="font-size: 22;text-align: center;" verticalAlignment="center" (tap)="onback()"></Label>
+        <Label text="Product Manager" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout>
+
+        <StackLayout style="background-color: white;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <StackLayout row='1' class="brand-addvieo-container">
+
+
+                        <GridLayout rows="50,50,auto,50,auto,auto,auto,auto,auto" class="add-video">
+
+                            <!-- <Label row="0" text="&#xf060;" class="far backbutton custm-font" verticalAlignment="center" horzontalAlignment="left" (tap)="onback()"></Label> -->
+
+                            <GridLayout row="1" columns="*,auto,auto auto" class="add-new-label">
+                                <Label col="0" class="custom-font-bold Label-name" [text]="productName" verticalAlignment="center"></Label>
+                                <Label col="1" class="custom-font" color="green" *ngIf="isActive" text="Active" verticalAlignment="center"></Label>
+                                <Label col="1" class="custom-font" color="red" *ngIf="!isActive" text="Inactive" verticalAlignment="center"></Label>
+                                <!-- <Switch checked="true" col="2" color="#256EEB" backgroundColor="gray" horizontalAlignment="right" verticalAlignment="top"></Switch> -->
+                                <Label text="&#xf304;" col="3" class="fas edit-label" (tap)="Goedit()" verticalAlignment="center" horizontalAlignment="right"></Label>
+                            </GridLayout>
+
+                            <GridLayout row="3" orientation="horizontal" class="add-images-label">
+                                <Label text="Images:" class="custom-font name1" verticalAlignment="center" horizontalAlignment="left"></Label>
+                            </GridLayout>
+
+                            <Gridlayout row="4" class="brand-addimage-container" verticalAlignment="center" horizontalAlignment="left">
+                                <ScrollView orientation="horizontal">
+                                    <StackLayout orientation="horizontal">
+
+                                        <Image [src]="image" *ngFor="let image of currentImages"></Image>
+
+                                    </StackLayout>
+                                </ScrollView>
+                            </Gridlayout>
+
+
+                            <GridLayout row="5" rows="30,120" orientation="vertical" class="video-preview">
+                                <Label row="0" text="product Description:" class="name1" horizontalAlignment="left"></Label>
+                                <GridLayout row="1" class="video-priview-desc">
+                                    <Label class="custom-font " textwrap="true" [text]="productDesc" vericalAlignment="top"></Label>
+                                </GridLayout>
+                            </GridLayout>
+
+                            <GridLayout row="6" rows="30,40" orientation="vertical" class="brand-price-container">
+                                <Label row="0" text="Price:" class="name1" horizontalAlignment="left"></Label>
+                                <StackLayout orientation="horizontal" row="1" class="price-block" width="70%" horizontalAlignment="left">
+                                    <!-- <Label text="&#xf156;" class="far" col="0" verticalAlignment="top" marginTop="2dp"></Label> -->
+                                    <Label [text]="currency[selectedCurrency]" col="1" class="custom-font-bold"></Label>
+                                    <Label [text]="price" col="1" class="custom-font-bold"></Label>
+                                    <Label text="/" col="2" class="custom-font-boldt"></Label>
+                                    <Label [text]="unit" col="3" class="custom-font-bold"></Label>
+
+                                </StackLayout>
+                            </GridLayout>
+
+                            <StackLayout row="7" rows="30,100">
+                                <Label row="0" class="custom-font textfield-title" verticalAlignment="center" text="Enter URL/WEBLINK" horizontalAlignment="left"></Label>
+                                <GridLayout row="1" columns="70,*" class="video-link">
+
+
+                                    <StackLayout col="0" style="text-align: center;" verticalAlignment="center">
+                                        <Label text="&#xf0ac;" class="fas youtube" verticalAlignment="bottom"></Label>
+                                    </StackLayout>
+                                    <StackLayout col="1" verticalAlignment="center">
+                                        <TextField [(ngModel)]="productUrl" #productUrlng="ngModel" disabled="true" verticalAlignment="bottom" style.placeholderColor="gray" returnKeyType="done"></TextField>
+                                    </StackLayout>
+                                </GridLayout>
+                            </StackLayout>
+                            <GridLayout row="8" rows="30,*" orientation="vertical" class="video-preview">
+                                <Label row="0" class="custom-font " text="YouTube Video:"></Label>
+                                <Image row="1" [src]="getPreviewImage(youtubeVideoId)" verticalalignment="center"></Image>
+                            </GridLayout>
+
+                        </GridLayout>
+                    </StackLayout>
+                </ScrollView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

@@ -1,0 +1,54 @@
+<ActionBar title="Gallery manager" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+
+</ActionBar>
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 22;text-align: center;" verticalAlignment="center" (tap)="onback()"></Label>
+        <Label text="Gallery manager" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout class="brand-addvieo-container">
+
+
+        <GridLayout rows="50,100,50,auto,150" class="add-video">
+
+            <Label row="0" text="&#xf060;" class="far backbutton custm-font" verticalAlignment="center" horzontalAlignment="left" (tap)="onback()"></Label>
+
+
+            <GridLayout row="1" class="username" rows="30,*">
+                <Label row="0" class="custom-font textfield-title" text="Video Title" horizontalAlignment="left"></Label>
+
+                <TextField row="1" [(ngModel)]="videoTitle" #videoTitleng="ngModel" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+            </GridLayout>
+
+            <GridLayout row="2" columns="70,*" class="video-link">
+                <StackLayout col="0" style="text-align: center;" verticalAlignment="center">
+                    <Label text="&#xf167;" class="fab youtube" verticalAlignment="bottom"></Label>
+                </StackLayout>
+                <StackLayout col="1" verticalAlignment="center">
+                    <TextField (returnPress)='onyoutubeSrc()' [(ngModel)]="youtubeSrc" #youtubeSrcng="ngModel" verticalAlignment="bottom" hint="Paste YouTube link" style.placeholderColor="gray" returnKeyType="done"></TextField>
+                </StackLayout>
+            </GridLayout>
+
+
+            <GridLayout row="3" rows=" 30,30,auto" orientation="vertical" class="video-preview" *ngIf="youtubeVideoId">
+                <Label row="0" class="custom-font textfield-title" text="Video Preview:" horizontalAlignment="left"></Label>
+
+                <Label row="1" class="custom-font " verticalAlignment="center"></Label>
+                <!-- <YoutubePlayer row="1" apiKey="AIzaSyCDH3BGQZT2ebUfSE8D3I8NLqaCPu4FRh0" src="{{youtubeVideoId}}" height="250" width="100%"></YoutubePlayer> -->
+                <Image row="2" [src]="getPreviewImage(youtubeVideoId)"></Image>
+            </GridLayout>
+
+            <GridLayout row="4" columns="auto,auto" class="brand-videobtn-container" horizontalAlignment="center">
+                <Button col="0" text="Reset" class="reset-button" (tap)="onreset()"> </Button>
+                <Button col="1" text="Update" class="save-button" (tap)="onEdit()"> </Button>
+            </GridLayout>
+
+
+        </GridLayout>
+
+    </StackLayout>
+
+</GridLayout>

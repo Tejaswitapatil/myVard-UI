@@ -1,0 +1,51 @@
+<ActionBar title="Gallery manager" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+
+</ActionBar>
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 22;text-align: center;"
+            verticalAlignment="center" (tap)="onToggleMenu()"></Label>
+        <Label text="Gallery manager" color="white"
+            style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout>
+
+        <StackLayout
+            style="background-color: white;height: 100%;">
+            <StackLayout row='1'>
+                <Tabs selectedIndex="0" tabsPosition='top' (selectedIndexChanged)="selectedIndexChanged($event)">
+
+                    <TabStrip>
+                        <TabStripItem class="tabstrip">
+                            <Label text="Image gallery"></Label>
+                        </TabStripItem>
+                        <TabStripItem class="tabstrip">
+                            <Label text="Video gallery"></Label>
+                        </TabStripItem>
+                    </TabStrip>
+
+                    <TabContentItem>
+
+                        <app-image-view></app-image-view>
+                        
+
+                    </TabContentItem>
+                    <TabContentItem>
+
+                        
+                        <app-video-view></app-video-view>
+
+                    </TabContentItem>
+
+                </Tabs>
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</GridLayout>

@@ -1,0 +1,66 @@
+   /* Add mobile styles for the component here.  */
+   
+   .main {
+       background-color: #256EEB;
+   }
+   
+   .main-1 {
+       padding: 10% 0 30px 30px;
+       height: 100%;
+   }
+   
+   button {
+       font-size: 15;
+       horizontal-align: center;
+   }
+   /* ============================================================================================= */
+   
+   Label {
+       color: black;
+   }
+   /*    
+   .brand-otp-verified-container .otp-icon {
+       font-size: 80dp;
+       color: white;
+   } */
+   
+   .brand-otp-verified-container {
+       background-color: #256EEB;
+       text-align: center;
+       border-radius: 100%;
+       height: 150dp;
+       width: 150dp;
+   }
+   
+   .brand-name-container Label {
+       text-align: center;
+   }
+   
+   .brand-otp-verified-container .check-icon {
+       font-size: 55dp;
+       color: #dfdbdb;
+       font-weight: bold;
+   }
+   
+   .otp-text {
+       font-size: 18dp;
+       color: black;
+       font-weight: 500;
+   }
+   
+   .firstgrid {
+       padding: 30% 20%;
+   }
+   
+   .h2 {
+       /* font-family: Open Sans, SemiBold; */
+       font-weight: bold;
+       font-size: 18dp;
+       color: rgb(17, 17, 17);
+   }
+   
+   .text {
+       /* font-family: Open Sans, SemiBold; */
+       font-size: 16dp;
+       color: rgb(17, 17, 17);
+   }

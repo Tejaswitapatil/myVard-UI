@@ -1,0 +1,25 @@
+
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 25;text-align: center; "
+            verticalAlignment="center" (tap)="onToggleMenu()"></Label>
+        <Label text="Scan" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; "
+            verticalAlignment="center"></Label>
+        <Label text="&#xf0f3;" class="far" color="white" style="font-size: 20;text-align: center; "
+            verticalAlignment="center"></Label>
+
+    </StackLayout> -->
+
+    <StackLayout >
+        <StackLayout
+            style="background-color: white;height: 100%;">
+            <Label text="Home" style="color:white; padding-left: 15px; font-size:19dp;"></Label>
+
+            <StackLayout>
+                <FAB (tap)="fabTap()" text="&#xf067;" rippleColor="#f1f1f1" class="fab-button far"></FAB>
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
+
+</GridLayout>

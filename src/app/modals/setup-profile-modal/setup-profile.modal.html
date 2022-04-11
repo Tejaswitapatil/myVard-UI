@@ -1,0 +1,15 @@
+<StackLayout horizontalAlignment="center" style="background-color:transparent;">
+    <GridLayout rows="auto,*,*" height="200dp" orienation="vertical" width="100%"
+        style="border-radius: 10dp; border-width: 2dp; border-color: rgb(226, 222, 222); border-style: solid; background-color: rgb(255, 255, 255);">
+        <Label row="0" text="x" (tap)="onClose(0)" horizontalAlignment="right"
+            style="font-size:20dp;font-weight:600; margin:0dp 10dp;color: lightgray;"></Label>
+        <Label row="1" class="custom-font" [text]="customText" verticalAlignment="center" class="custom-font"
+            style="text-align:center; font-size:16dp; font-weight:600; color: black;" width="80%"
+            textWrap="true"></Label>
+        <GridLayout row="2" orientation="horizontal" horizontalAlignment="center" style="padding:10dp;">
+            <Button horizontalAlignment="center" text="Let's Go" (tap)="onClose(1)" style=" width:70%; font-size:16dp;color: white; border-radius: 10dp; border-width: 2dp; border-color: rgb(226, 222, 222); border-style: solid; height:50dp;
+            font-weight: 600; background-color:#ED7200;">
+            </Button>
+        </GridLayout>
+    </GridLayout>
+</StackLayout>

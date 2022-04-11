@@ -1,0 +1,146 @@
+<ActionBar title="Edit Profile" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+
+</ActionBar>
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 22;text-align: center;" verticalAlignment="center" (tap)="onToggleMenu()"></Label>
+        <Label text="My Profile" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout>
+
+        <StackLayout style="background-color: white;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <StackLayout rows=" 30,200,100,100,auto,100,100,auto,auto" class="brand-category-container">
+                        <StackLayout row="0">
+                            <Label text="Personal details:" class="title custom-font"></Label>
+
+                        </StackLayout>
+                        <GridLayout row="1" orientation="vertical" class="brand-profileimg-container" backgroundColor="gray">
+
+
+                            <Image row="0" [src]="image" horizontalAlignment="center" (tap)="onProfileImage()"></Image>
+                            <Label text="&#xf030;" class="fas camera-icon" verticalAlignment="bottom" horizontalAlignment="right"></Label>
+
+                        </GridLayout>
+
+
+                        <GridLayout row="2" class="username" rows="20,*">
+                            <Label row="0" class="custom-font textfield-title" text="Name" horizontalAlignment="left"></Label>
+                            <TextField row="1" [(ngModel)]="name" #nameng="ngModel" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                        </GridLayout>
+
+                        <StackLayout row="3" rows="20,*">
+                            <Label row="0" class="custom-font textfield-title" text="Email id" verticalAlignment="center" horizontalAlignment="left"></Label>
+                            <GridLayout row="1" columns="*, auto" class="password" (tap)="oneditEmail()">
+                                <TextField col="0" disabled [(ngModel)]="email" #emailng="ngModel" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="done"></TextField>
+                                <Label col="1" class="page-icon fas" style="font-size: 15dp;" text="&#xf304;" verticalAlignment="center"></Label>
+                            </GridLayout>
+                        </StackLayout>
+
+                        <Stacklayout row="4" rows="20, *" margin="15dp 0">
+                            <Label row="0" class="custom-font textfield-title" text="Mobile Number" verticalAlignment="bottom" horizontalAlignment="left"></Label>
+                            <GridLayout columns="auto,*" row="1" class="video-link">
+
+                                <StackLayout col="0 " class="dropdown-box">
+                                    <GridLayout rows="auto, auto, * " columns="auto,*">
+                                        <DropDown #countrydd itemsTextAlignment="center" class="dropdown" [items]="contry" [(ngModel)]="selectedcountryIndex" (selectedIndexChanged)="onchangecountry($event)"></DropDown>
+                                    </GridLayout>
+                                </StackLayout>
+
+
+                                <StackLayout col="1" verticalAlignment="center">
+                                    <TextField verticalAlignment="bottom" color="black" [(ngModel)]="mobile" #mobileng="ngModel" hint="Mobile Number" style.placeholderColor="gray" returnKeyType="next" keyboardType="number"></TextField>
+                                </StackLayout>
+                            </GridLayout>
+                        </Stacklayout>
+
+
+                        <Stacklayout row="5" rows="20, *">
+                            <Label row="0" class="custom-font textfield-title" text="Gender" verticalAlignment="bottom" horizontalAlignment="left"></Label>
+
+                            <GridLayout row="1" columns="auto,*" class="video-link dropdown-box-gender" vericalAlignment="center">
+
+
+
+                                <StackLayout col="1" verticalAlignment="center">
+                                    <StackLayout col="0 " class="gender-dropdown">
+                                        <GridLayout rows="auto, auto, * " columns="auto,*">
+                                            <DropDown #genderdd itemsTextAlignment="center" verticalAlignment="center" class="dropdown" [items]="Gender" [(ngModel)]="selectedgenderIndex" (selectedIndexChanged)="onchangegender($event)" row="0 " colspan="2 "></DropDown>
+                                        </GridLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </GridLayout>
+                        </Stacklayout>
+
+                        <GridLayout row="6" class="username" rows="30,*" marginTop="15dp">
+                            <Label row="0" class="custom-font textfield-title" text="Blood Group" horizontalAlignment="left"></Label>
+                            <TextField row="1" verticalAlignment="center" hint="Blood Group" [(ngModel)]="bloodgroup" #bloodgroupng="ngModel" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                        </GridLayout>
+
+
+                        <!-- <GridLayout row="7" rows="30,100" orientation="vertical" class="video-preview">
+                            <Label row="0" text="Date of Birth:" class="custom-font textfield-title" horizontalAlignment="left"></Label>
+                            <GridLayout row="1" columns="*,*,*" class="video-priview-desc">
+                                <GridLayout rows="20,*" col="0">
+                                    <Label row="0" text="Date" class="textfield-title"></Label>
+                                    <StackLayout row="1" class="dropdown-date">
+                                        <GridLayout rows="auto, auto, * " columns="*">
+                                            <DropDown #datesdd itemsTextAlignment="center" class="dates" [items]="dates" [(ngModel)]="selecteddatesIndex" (selectedIndexChanged)="onchangedates($event)" verticalAlignment="center" row="0 " col="0 "></DropDown>
+                                        </GridLayout>
+                                    </StackLayout>
+                                </GridLayout>
+                                <GridLayout rows="20,*" col="1">
+                                    <Label row="0" text="Month" class="textfield-title"></Label>
+                                    <StackLayout row="1" class="dropdown-date">
+
+                                        <GridLayout rows="auto, auto, * " columns="auto,*">
+                                            <DropDown #monthdd itemsTextAlignment="center" class="dates" [items]="month" [(ngModel)]="selectedmonthIndex" (selectedIndexChanged)="onchangemonth($event)" verticalAlignment="center" row="0 " col="0 "></DropDown>
+                                        </GridLayout>
+
+                                    </StackLayout>
+                                </GridLayout>
+
+
+                                <GridLayout rows="20,*" col="2">
+                                    <Label row="0" text="Year" class="textfield-title"></Label>
+                                    <StackLayout row="1" class="dropdown-date">
+                                        <GridLayout rows="auto, auto, * " columns="auto,*">
+                                            <DropDown #yeardd itemsTextAlignment="center" class="dates" [items]="year" [(ngModel)]="selectedyearIndex" (selectedIndexChanged)="onchangeyear($event)" verticalAlignment="center" row="0 " col="0 "></DropDown>
+                                        </GridLayout>
+                                    </StackLayout>
+                                </GridLayout>
+
+
+                            </GridLayout>
+                        </GridLayout> -->
+
+                        <GridLayout row="7" rows="30,auto" orientation="vertical" class="video-preview">
+                            <Label row="0" text="Date of Birth:" class="custom-font textfield-title" horizontalAlignment="left"></Label>
+                            <DatePicker row="1" year="1991" month="2" day="10" class="date-picker" [minDate]="minDate" [maxDate]="maxDate" (dateChange)="onDateChanged($event)" (dayChange)="onDayChanged($event)" (monthChange)="onMonthChanged($event)" (yearChange)="onYearChanged($event)"
+                                (loaded)="onDatePickerLoaded($event)" verticalAlignment="center">
+                            </DatePicker>
+                        </GridLayout>
+
+
+                        <GridLayout row="8" class="brand-videobtn-container" marginTop="20dp" horizontalAlignment="center" vericalAlignment="center" sdkExampleTitle sdkToggleNavButton>
+                            <!-- <Button text="Save" class="save-button" (tap)="onTap()"> </Button> -->
+                            <Button text="Save" class="save-button" (tap)="updatePersonalProfile()"> </Button>
+                        </GridLayout>
+
+                    </StackLayout>
+                </ScrollView>
+
+
+            </AbsoluteLayout>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</GridLayout>

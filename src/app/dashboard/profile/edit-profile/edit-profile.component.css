@@ -1,0 +1,191 @@
+.main-1 {
+    padding: 30% 0 30px 30px;
+    height: 100%;
+}
+
+.brand-category-container {
+    /* border-radius: 50px 50px 0px 0px; */
+    padding: 20dp;
+    /* background-color: #256EEB; */
+}
+
+.name {
+    font-size: 14dp;
+    color: #000000;
+    font-weight: 600;
+    margin-top: 10dp;
+    padding-left: 10dp;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 14dp;
+    color: black;
+    /* padding: 10dp 0; */
+}
+
+.brand-profileimg-container {
+    border-radius: 100%;
+    height: 120dp;
+    width: 120dp;
+    border-width: 1dp;
+    border-color: var(--primary);
+    margin: 15dp 0;
+}
+
+.brand-profileimg-container Image {
+    height: 120dp;
+    width: 120dp;
+    border-radius: 100%;
+}
+
+.page-icon {
+    color: var(--fourth);
+    margin-right: 10dp;
+}
+
+.username TextField {
+    /* font-family: Open Sans, SemiBold; */
+    font-size: 14dp;
+    border-color: gray;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    border-width: 2px;
+    height: 60dp;
+    /* padding-left: 40px; */
+    width: 100%;
+    padding: 0px 40px;
+    margin: 10dp 0 0;
+}
+
+.video-link {
+    border-width: 2px;
+    border-color: gray;
+    border-radius: 20px;
+    height: 60dp;
+    padding: 5dp;
+    margin: 10dp 0 0dp 0;
+}
+
+.video-link .dropdown {
+    padding: 5dp;
+}
+
+.video-link TextField {
+    font-size: 14dp;
+    border-color: white;
+    margin: 10dp 40dp;
+    border: 0px 0px 0px 0px;
+    padding-left: 10dp;
+    width: 90%;
+    height: 60dp;
+}
+
+.dropdown-box {
+    border-right-width: 3px;
+    border-color: gray;
+}
+
+.dropdown {
+    margin: 10dp 0 0;
+    font-size: 14dp;
+    color: black;
+}
+
+
+/* .video-preview {
+    padding: 15dp 0dp;
+} */
+
+
+/* .video-preview Label {
+    font-size: 14dp;
+    color: #525252;
+    font-weight: 600;
+} */
+
+.video-preview Image {
+    border-radius: 10%;
+    border-width: 2px;
+    border-color: rgb(216, 212, 212);
+}
+
+.dropdown-date {
+    border-width: 3px;
+    border-color: gray;
+    border-radius: 20px;
+    padding: 10dp 0 0;
+    margin: 8dp 3dp;
+    text-align: right;
+    /* background-color: pink; */
+    height: 60dp;
+}
+
+.dates {
+    /* height: 10dp; */
+    font-size: 14dp;
+    color: black;
+    padding: 3dp;
+}
+
+.save-button {
+    background-color: var(--secondary);
+    text-align: center;
+    font-size: 14dp;
+    border-radius: 10;
+    font-weight: 600;
+    /* margin: 3% 3%; */
+    width: 40%;
+    color: white;
+}
+
+.name1 {
+    font-size: 14dp;
+    color: #525252;
+    font-weight: 600;
+}
+
+.password TextField {
+    /* font-family: Open Sans, SemiBold; */
+    font-size: 14dp;
+    border-color: transparent;
+    color: black;
+    height: 60dp;
+    /* padding-left: 10px; */
+    /* padding-right: 40px; */
+    width: 100%;
+    margin-top: 10dp;
+    padding: 0px 40px;
+}
+
+.password {
+    /* font-family: Open Sans, SemiBold; */
+    font-size: 14dp;
+    border-color: gray;
+    color: black;
+    border-radius: 20px;
+    border-width: 2px;
+    height: 60dp;
+    margin: 10dp 25dp 0;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.date-picker {
+    background-color: rgb(246, 244, 244);
+    border-color: rgb(226, 224, 224);
+    border-width: 2;
+    border-radius: 10dp;
+    color: black;
+    vertical-align: middle;
+    margin-top: 5dp;
+}
+
+.camera-icon {
+    background-color: var(--fourth);
+    color: white;
+    padding: 5dp;
+    border-radius: 100%;
+    font-size: 15dp;
+    text-align: center;
+}

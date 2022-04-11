@@ -1,0 +1,44 @@
+<AbsoluteLayout width="100%" height="100%">
+
+    <ScrollView backgroundColor="white" top="0" left="0" width="100%" height="100%">
+        <StackLayout *ngIf="!products[0]" verticalAlignment="center" horizontalAlignment="center" class="brand-product-container">
+            <Image src="~/assets/images/product.png" class="product-empty-image"></Image>
+            <Label text="Your product list is empty" class="product-empty-tag custom-font"></Label>
+        </StackLayout>
+
+        <StackLayout *ngIf="products[0]" row="1" class="brand-category-container">
+            <Label text="Available Products:" class="title custom-font"></Label>
+            <CardView ripple="true" class="category-card" *ngFor="let image of products;let i=index">
+                <GridLayout orientation="horizontal" class="card1" columns="130,*,auto" rows="auto,auto,auto,auto">
+                    <Image (tap)="Goview(image)" rowSpan="4" col="0" row="0" [src]="image.image[0]" class="category-image" verticalAlignment="center"></Image>
+
+                    <Label col="1" row="0" (tap)="Goview(image)" textWrap="true" class="name custom-font" [text]="image.name"></Label>
+                    <Label col="2" row="0" text="&#xf1f8;" class="fas delete" horizontalAlignment="right" (tap)="onDelete(image)" verticalAlignment="center"></Label>
+
+                    <Label col="1" colspan="2" row="1" class="subtitle custom-font" textwrap="true" [text]="image.description"></Label>
+                    <WrapLayout colSpan="2" col="1" row="2" orientation="horizontal" class="port-image-container">
+                        <Image [src]="image.image[0]" class="port-img" verticalAlignment="center" horizontalAlignment="left"></Image>
+                        <Image [src]="image.image[1]" class="port-img" verticalAlignment="center" horizontalAlignment="left"></Image>
+                        <Image [src]="image.image[2]" class="port-img" verticalAlignment="center" horizontalAlignment="left"></Image>
+                    </WrapLayout>
+                    <GridLayout row="3" col="1" columns="*,*,*">
+                        <Switch [checked]="!image.status" col="0" [ngClass]="image.status == true ? 'active-switch' : 'inactive-switch' "
+                         (tap)="toggleStatus(i)" horizontalAlignment="left" style=" margin: 5dp 0dp;">
+                        </Switch>
+                        <Label col="1" *ngIf="image.status" text="Active" color="green" verticalAlignment="center"></Label>
+                        <Label col="1" *ngIf="!image.status" text="Inactive" color="red" verticalAlignment="center"></Label>
+                        <Label col="2" text="Edit" class="edit" (tap)="Goedit(image)" verticalAlignment="center"></Label>
+                    </GridLayout>
+
+                </GridLayout>
+            </CardView>
+        </StackLayout>
+
+    </ScrollView>
+
+    <AbsoluteLayout left="0" top="0" width="100%" height="100%">
+        <FAB (tap)="OnTap()" #fab text="&#xf067;" [left]="left" [top]="top" rippleColor="#f1f1f1" class="fab-button far">
+        </FAB>
+    </AbsoluteLayout>
+
+</AbsoluteLayout>

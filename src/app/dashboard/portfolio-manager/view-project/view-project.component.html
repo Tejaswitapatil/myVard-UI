@@ -1,0 +1,172 @@
+<ActionBar title="Portfolio Manager" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+    <ActionItem icon="font://&#xf2ed;" class="fas" ios.position="right" android.position="actionBarIfRoom" style=" font-size:6dp;color:white;"></ActionItem>
+    <ActionItem icon="font://&#xf142;" class="far" ios.position="right" android.position="actionBarIfRoom" style="font-size:6dp; color:white;"></ActionItem>
+</ActionBar>
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 22;text-align: center;"
+            verticalAlignment="center" (tap)="onToggleMenu()"></Label>
+        <Label text="Portfolio Manager" color="white"
+            style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout>
+
+        <StackLayout style="background-color: white;border-top-left-radius: 20;border-top-right-radius: 20;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <StackLayout row='1' class="brand-addvieo-container">
+
+
+                        <GridLayout rows="50,50,auto,50,auto,auto,70,auto,100" class="add-video">
+
+                            <Label row="0" text="&#xf060;" class="far backbutton custm-font" verticalAlignment="center" horzontalAlignment="left" (tap)="onback()"></Label>
+
+                            <GridLayout row="1" columns="*,auto,auto,auto" class="add-new-label">
+                                <Label col="0" class="custom-font-bold Label-name" text="" verticalAlignment="center"></Label>
+                                <Label col="1" class="custom-font" color="green" *ngIf="isActive" text="Active" verticalAlignment="center"></Label>
+                                <Label col="1" class="custom-font" color="red" *ngIf="!isActive" text="Inactive" verticalAlignment="center"></Label>
+                                <Switch (tap)="toggleStatus()" [checked]="isActive" col="2" [ngClass]="isActive == true ? 'active-switch' : 'inactive-switch' " backgroundColor="gray" horizontalAlignment="left" verticalAlignment="top"></Switch>
+                                <Label text="&#xf304;" col="3" class="fas edit-label" (tap)="Goedit()" verticalAlignment="center" horizontalAlignment="right"></Label>
+                            </GridLayout>
+
+
+                            <GridLayout row="2" rows="auto ,auto" class="brand-projectname-container">
+
+                                <Label row="0" text="Project Name:" class="name custom-font"></Label>
+                                <Label row="1" [text]="projectName" class="custom-font project-name"></Label>
+                            </GridLayout>
+
+
+                            <GridLayout row="3" orientation="horizontal" class="add-images-label">
+                                <Label text="Images:" class="custom-font name2" verticalAlignment="center" horizontalAlignment="left"></Label>
+                            </GridLayout>
+
+                            <Gridlayout row="4" class="brand-addimage-container" verticalAlignment="center" horizontalAlignment="left">
+                                <ScrollView orientation="horizontal">
+                                    <StackLayout orientation="horizontal">
+
+                                        <Image *ngFor="let image of currentImages" [src]="image"></Image>
+
+                                    </StackLayout>
+                                </ScrollView>
+                            </Gridlayout>
+
+                            <GridLayout row="5" rows="20,120" orientation="vertical" class="video-preview">
+                                <Label row="0" text="Project Description:" class="custom-font name1" horizontalAlignment="left"></Label>
+                                <GridLayout row="1" class="video-priview-desc">
+                                    <Label class="custom-font" textwrap="true" [text]="projectDesc" vericalAlignment="top"></Label>
+                                </GridLayout>
+                            </GridLayout>
+
+                            <GridLayout row="6" columns="50,*" class="video-link" horizontalAlignment="left">
+                                <StackLayout col="0" style="text-align: center" verticalAlignment="center">
+                                    <Label text="&#xf0ac;" class="fas youtube" verticalAlignment="bottom"></Label>
+                                </StackLayout>
+                                <StackLayout col="1" verticalAlignment="center">
+                                    <Label class="link custom-font" verticalAlignment="center" [text]="youtubeSrc"></Label>
+                                </StackLayout>
+                            </GridLayout>
+
+                            <GridLayout row="7" rows="30,*" orientation="vertical" class="video-preview">
+                                <Label row="0" class="custom-font " text="Video:"></Label>
+                                <!-- <YoutubePlayer row="1" apiKey="AIzaSyCDH3BGQZT2ebUfSE8D3I8NLqaCPu4FRh0" src="{{youtubeVideoId}}" height="250" width="100%"></YoutubePlayer> -->
+                                <Image row="1" [src]="getPreviewImage(youtubeVideoId)" verticalalignment="center">
+                                </Image>
+                            </GridLayout>
+
+                            <!-- <GridLayout row="8" columns="auto,auto" class="brand-videobtn-container" horizontalAlignment="center" vericalAlignment="center">
+                                <Button col="0" text="Reset" class="reset-button"> </Button>
+                                <Button col="1" text="Update" class="save-button" (tap)="viewproject()"> </Button>
+                            </GridLayout> -->
+
+
+                        </GridLayout>
+                    </StackLayout>
+                </ScrollView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>
+
+<!-- <StackLayout row='1' class="brand-addvieo-container">
+
+
+        <GridLayout rows="50,80,50,auto,150" class="add-video">
+
+            <Label row="0" text="&#xf060;" class="far backbutton custm-font" verticalAlignment="center" horzontalAlignment="left" (tap)="onback()"></Label>
+
+            <GridLayout row="1" class="username">
+                <TextField [(ngModel)]="videoTitle" #videoTitleng="ngModel" verticalAlignment="center" hint="Video Title" style.placeholderColor="gray" returnKeyType="next"></TextField>
+            </GridLayout>
+
+            <GridLayout row="2" columns="70,*" class="video-link">
+                <StackLayout col="0" style="text-align: center;" verticalAlignment="center">
+                    <Label  text="&#xf167;" class="fab youtube" verticalAlignment="bottom"></Label>
+                </StackLayout>
+                <StackLayout col="1"  verticalAlignment="center">
+                    <TextField (returnPress)='onyoutubeSrc()' [(ngModel)]="youtubeSrc" #youtubeSrcng="ngModel" verticalAlignment="bottom" hint="Paste YouTube link" style.placeholderColor="gray" returnKeyType="done"></TextField>
+                </StackLayout>
+            </GridLayout>
+
+
+            <GridLayout row="3" rows="30,auto" orientation="vertical" class="video-preview" *ngIf="youtubeVideoId">
+                
+            </GridLayout>
+
+            <GridLayout row="4" columns="auto,auto" class="brand-videobtn-container" horizontalAlignment="center">
+                <Button col="0" text="Reset" class="reset-button"> </Button>
+                <Button col="1" text="Save" class="save-button" (tap)="onyoutubeSrc()"> </Button>
+            </GridLayout>
+
+
+        </GridLayout>
+
+    </StackLayout> -->
+
+<!-- <GridLayout class="main" rows="90,*">
+    <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf060;" class="far" color="white" style="font-size: 22;text-align: center;" verticalAlignment="center" (tap)="onback()"></Label>
+        <Label text="Portfolio manager" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout>
+
+    <StackLayout row='1' class="brand-addvieo-container">
+
+
+        <GridLayout rows="50,80,50,auto,150" class="add-video">
+
+            <Label row="0" text="&#xf060;" class="far backbutton custm-font" verticalAlignment="center" horzontalAlignment="left" (tap)="onback()"></Label>
+
+            <GridLayout row="1" class="username">
+                <TextField [(ngModel)]="videoTitle" #videoTitleng="ngModel" verticalAlignment="center" hint="Video Title" style.placeholderColor="gray" returnKeyType="next"></TextField>
+            </GridLayout>
+
+            <GridLayout row="2" columns="70,*" class="video-link">
+                <StackLayout col="0" style="text-align: center;" verticalAlignment="center">
+                    <Label  text="&#xf167;" class="fab youtube" verticalAlignment="bottom"></Label>
+                </StackLayout>
+                <StackLayout col="1"  verticalAlignment="center">
+                    <TextField (returnPress)='onyoutubeSrc()' [(ngModel)]="youtubeSrc" #youtubeSrcng="ngModel" verticalAlignment="bottom" hint="Paste YouTube link" style.placeholderColor="gray" returnKeyType="done"></TextField>
+                </StackLayout>
+            </GridLayout>
+
+
+            <GridLayout row="3" rows="30,auto" orientation="vertical" class="video-preview" *ngIf="youtubeVideoId">
+                
+            </GridLayout>
+
+            <GridLayout row="4" columns="auto,auto" class="brand-videobtn-container" horizontalAlignment="center">
+                <Button col="0" text="Reset" class="reset-button"> </Button>
+                <Button col="1" text="Save" class="save-button" (tap)="onyoutubeSrc()"> </Button>
+            </GridLayout>
+
+
+        </GridLayout>
+
+    </StackLayout>
+
+</GridLayout> -->

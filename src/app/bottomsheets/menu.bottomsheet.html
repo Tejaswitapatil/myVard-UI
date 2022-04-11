@@ -1,0 +1,35 @@
+<!-- <ListView
+    [items]="options"
+    (itemTap)="onTap($event)"
+    separatorColor="white"
+    class="list-group"
+    height="200"
+>
+    <ng-template let-option="item">
+        <Label
+            class="list-group-item"
+            [text]="option"
+        ></Label>
+    </ng-template>
+</ListView> -->
+<ScrollView>
+    <StackLayout class="main">
+        <Label text="&#xf30a;" class="fas" (tap)="onTap(1)"></Label>
+        <StackLayout class="main">
+            <Label text="Forgot Password" class="h2"></Label>
+            <Label textWrap="true" class="text"
+                text="Enter your email or mobile number for the verification process, we will send 4 digit code to your given Email or mobile number"></Label>
+
+            <StackLayout orientation="horizontal" style="border-bottom-color: black;margin: 15px 0;">
+                <Label text="&#xf0e0;" class="far icon"></Label>
+                <Label text="Via E-mail" class="text"></Label>
+            </StackLayout>
+            
+            <StackLayout orientation="horizontal" style="border-bottom-color: black;margin: 15px 0;">
+                <Label text="&#xf095;" class="fas icon"></Label>
+                <Label text="Via Phone" class="text"></Label>
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
+</ScrollView>

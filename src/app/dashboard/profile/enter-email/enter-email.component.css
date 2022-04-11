@@ -1,0 +1,84 @@
+   /* Add mobile styles for the component here.  */
+   
+   .main {
+       background-color: #256EEB;
+   }
+   
+   .main-1 {
+       padding: 10% 0 30px 30px;
+       height: 100%;
+   }
+   
+   .textfield-title {
+       font-size: 14dp;
+       color: #797979;
+       font-weight: 600;
+   }
+   
+   button {
+       font-size: 15;
+       horizontal-align: center;
+   }
+   
+   ScrollView {
+       margin-top: 0;
+   }
+   
+   Label {
+       color: black;
+   }
+   /* .brand-logo-container {} */
+   
+   .brand-logo-container Image {
+       justify-content: center;
+       text-align: center;
+       background-color: white;
+       height: 120dp;
+       width: 120dp;
+   }
+   
+   .backarrow {
+       font-size: 20dp;
+       color: black;
+   }
+   
+   .firstgrid {
+       padding: 30% 20%;
+   }
+   
+   .h2 {
+       /* font-family: Open Sans, SemiBold; */
+       font-weight: 700;
+       font-size: 18dp;
+       color: rgb(17, 17, 17);
+   }
+   
+   .text {
+       /* font-family: Open Sans, SemiBold; */
+       font-size: 16dp;
+       color: #525252;
+       font-weight: 600;
+   }
+   
+   .brand-textfield-container .username TextField {
+       /* font-family: Open Sans, SemiBold; */
+       font-size: 14dp;
+       border-color: gray;
+       color: rgb(0, 0, 0);
+       border-radius: 20px;
+       border-width: 2px;
+       height: 60dp;
+       padding-left: 40px;
+       width: 100%;
+   }
+   
+   .signin-button {
+       background-color: var(--primary);
+       text-align: center;
+       font-size: 16dp;
+       font-weight: 600;
+       border-radius: 10;
+       margin: 3% 0%;
+       width: 50%;
+       color: white;
+   }

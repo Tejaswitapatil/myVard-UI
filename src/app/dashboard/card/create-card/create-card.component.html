@@ -1,0 +1,613 @@
+<GridLayout class="main" rows="90,*">
+    <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 25;text-align: center; " verticalAlignment="center" (tap)="onToggleMenu()"></Label>
+        <Label text="Edit Card" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout>
+
+
+    <StackLayout row='1'>
+
+        <StackLayout style="background-color: white;border-top-left-radius: 20;border-top-right-radius: 20;height: 100%;">
+
+            <Tabs selectedIndex="0" tabsPosition='top'>
+
+                <TabStrip>
+                    <TabStripItem class="tabstrip">
+                        <Label text="Personal Details"></Label>
+                    </TabStripItem>
+                    <TabStripItem class="tabstrip">
+                        <Label text="Professional Details"></Label>
+                    </TabStripItem>
+                    <TabStripItem class="tabstrip">
+                        <Label text="Regional Details"></Label>
+                    </TabStripItem>
+                    <TabStripItem class="tabstrip">
+                        <Label text="Services"></Label>
+                    </TabStripItem>
+                    <TabStripItem class="tabstrip">
+                        <Label text="Portfolio"></Label>
+                    </TabStripItem>
+                    <TabStripItem class="tabstrip">
+                        <Label text="Image-Gallery"></Label>
+                    </TabStripItem>
+                    <TabStripItem class="tabstrip">
+                        <Label text="Video-Gallery"></Label>
+                    </TabStripItem>
+                    <TabStripItem class="tabstrip">
+                        <Label text="Products"></Label>
+                    </TabStripItem>
+                    <TabStripItem class="tabstrip">
+                        <Label text="External Links"></Label>
+                    </TabStripItem>
+
+                </TabStrip>
+
+                <TabContentItem>
+
+                    <ScrollView top="0" left="0" width="100%" height="100%">
+                        <StackLayout class="brand-card-container">
+
+
+                            <GridLayout rows="50,220,200,auto,auto,auto,auto,auto,auto,auto,100" class="brand-personaldetail-container">
+
+                                <GridLayout row="0">
+                                    <Label text="New card" horizontalAlignment="left" verticalAlignment="center" class="custom-font-bold title"></Label>
+                                </GridLayout>
+                                <GridLayout row="1" rows="30 ,*" orientation="vertical" verticalAlignment="center" class="add-wallpaler-container">
+                                    <Label row="0" text="Wallpaper/ Short Video :" class="custom-font title-name"></Label>
+
+                                    <GridLayout row="1" class="add-wallpaper">
+                                        <Label text=" + Add wallpaper or Short video" horizontalAlignment="center" verticalAlignment="center" class="custom-font "></Label>
+                                    </GridLayout>
+
+                                </GridLayout>
+                                <GridLayout row="2" rows="30 ,150" orientation="vertical" verticalAlignment="center" class="profile-container">
+
+                                    <Label row="0" text="Profile :" class="custom-font title-name"></Label>
+                                    <GridLayout row="1" orientation="vertical" class="brand-profileimg-container">
+
+                                        <Image src="~/assets/images/VVM-Logo.png" horizontalAlignment="center"></Image>
+                                        <Label text="&#xf030;" class="fas camera-icon" verticalAlignment="bottom" horizontalAlignment="right"></Label>
+
+
+                                    </GridLayout>
+                                </GridLayout>
+                                <GridLayout row="3" class="username" rows="30,*">
+                                    <Label row="0" class="custom-font textfield-title" text="Name" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                                </GridLayout>
+
+                                <GridLayout row="4" class="username" rows="30,*">
+                                    <Label row="0" class="custom-font textfield-title" text="Email Id" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                                </GridLayout>
+                                <GridLayout row="5" class="add-label" columns="auto,*">
+                                    <Label col="0" text="Add a label:" class="custom-font" verticalAlignment="center"></Label>
+                                    <TextField col="1" verticalAlignment="center" style.placeholderColor="gray" hint="Official email id" returnKeyType="next" class="add-label-textfield"></TextField>
+
+                                </GridLayout>
+                                <GridLayout row="6" margin="10dp 0">
+                                    <Label text="+   Email Id" class="add-emailid"></Label>
+                                </GridLayout>
+
+
+                                <GridLayout row="7" rows="30 *">
+                                    <Label row="0" class="custom-font textfield-title" text="Email Id" horizontalAlignment="left"></Label>
+                                    <GridLayout row="1" class="video-link" columns="auto,*">
+                                        <StackLayout col="0 " class="dropdown-box">
+                                            <GridLayout rows="auto, auto, *" columns="auto,*">
+                                                <DropDown #dd style="color: black;background-color: lightgray;" itemsTextAlignment="center" class="dropdown" [items]="contry" [(ngModel)]="selectedIndex" (selectedIndexChanged)="onchange($event)" (opened)="onopen()" (closed)="onclose()" row="0 " col="0 "></DropDown>
+                                                <!-- <Label text="Selected Index:" row="0" col="0 " fontSize="18" verticalAlignment="bottom"></Label> -->
+                                                <!-- <TextField [text]="selectedIndex " row="1 " col="1"></TextField> -->
+                                            </GridLayout>
+                                        </StackLayout>
+
+
+                                        <StackLayout col="1" verticalAlignment="center">
+                                            <TextField (returnPress)='onyoutubeSrc()' verticalAlignment="bottom" hint="Mobile Number" style.placeholderColor="gray" returnKeyType="done"></TextField>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </GridLayout>
+
+
+                                <GridLayout row="8" class="add-label" columns="auto,*">
+                                    <Label col="0" text="Add a label:" class="custom-font" verticalAlignment="center"></Label>
+                                    <TextField col="1" verticalAlignment="center" style.placeholderColor="gray" hint="Office" returnKeyType="next" class="add-label-textfield"></TextField>
+
+                                </GridLayout>
+                                <GridLayout row="9" margin="10dp 0">
+                                    <Label text="+   Mobile number" class="add-emailid"></Label>
+                                </GridLayout>
+                                <GridLayout row="10" horizontalAlignment="center" vericalAlignment="center">
+
+                                    <Button text="Save" class="save-button"> </Button>
+                                </GridLayout>
+                            </GridLayout>
+                        </StackLayout>
+                    </ScrollView>
+
+                </TabContentItem>
+                <TabContentItem>
+
+                    <ScrollView top="0" left="0" width="100%" height="100%">
+                        <StackLayout class="brand-card-container">
+
+
+                            <GridLayout rows="200,auto,auto,auto,auto,auto,auto,100" class="brand-personaldetail-container">
+                                <GridLayout row="0" rows="30 ,*" orientation="vertical" class="profile-container">
+
+                                    <Label row="0" text="Company Logo :" class="custom-font titlecolor"></Label>
+
+
+                                    <GridLayout row="1" class="brand-profileimg-container">
+                                        <Label text="&#xf1ad;" class="far componylogo" horizontalAlignment="center" verticalAlignment="center"></Label>
+                                        <Label text="&#xf030;" class="fas camera-icon" verticalAlignment="bottom" horizontalAlignment="right"></Label>
+                                    </GridLayout>
+                                </GridLayout>
+                                <GridLayout row="2" class="username" rows="30,*">
+                                    <Label row="0" class="custom-font textfield-title" text="Profession/Title" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                                </GridLayout>
+
+                                <GridLayout row="3" class="username" rows="30,*">
+                                    <Label row="0" class="custom-font textfield-title" text="Organisation name" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                                </GridLayout>
+                                <GridLayout row="4" class="username" rows="30,*">
+                                    <Label row="0" class="custom-font textfield-title" text="Department" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                                </GridLayout>
+
+                                <GridLayout row="5" rows="30,100" orientation="vertical" class="video-preview">
+                                    <Label row="0" text="Short Description" class="custom-font textfield-title" horizontalAlignment="left"></Label>
+                                    <GridLayout row="1" class="video-priview-desc">
+                                        <TextView [(ngModel)]="categoryDesc" #categoryDescng="ngModel" style.placeholderColor="gray" returnKeyType="next" vericalAlignment="top"></TextView>
+                                    </GridLayout>
+                                </GridLayout>
+
+                                <GridLayout row="6" rows="30,120" orientation="vertical" class="video-preview">
+                                    <Label row="0" text="Long Description" class="custom-font textfield-title" horizontalAlignment="left"></Label>
+                                    <GridLayout row="1" class="video-priview-desc1">
+                                        <TextView [(ngModel)]="categoryDesc" #categoryDescng="ngModel" style.placeholderColor="gray" returnKeyType="next" vericalAlignment="top"></TextView>
+                                    </GridLayout>
+                                </GridLayout>
+
+                                <GridLayout row="7" columns="auto,auto" class="brand-videobtn-container" horizontalAlignment="center">
+                                    <Button col="0 " text="Reset " class="reset-button " (tap)="onreset()"> </Button>
+                                    <Button col="1 " text="Save " class="save-button "> </Button>
+                                </GridLayout>
+
+
+
+
+
+
+                            </GridLayout>
+                        </StackLayout>
+                    </ScrollView>
+
+                </TabContentItem>
+                <TabContentItem>
+
+                    <ScrollView top="0" left="0" width="100%" height="100%">
+                        <StackLayout class="brand-card-container">
+
+
+                            <GridLayout rows="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,100" class="brand-personaldetail-container">
+                                <GridLayout row="0" rows="30 *">
+                                    <Label row="0" class="custom-font textfield-title" text="Country" horizontalAlignment="left"></Label>
+                                    <GridLayout row="1" columns="auto,*" class="video-link" vericalAlignment="center">
+                                        <StackLayout col="1" verticalAlignment="center">
+                                            <StackLayout col="0 ">
+                                                <GridLayout rows="auto, auto, * " columns="auto,*">
+                                                    <DropDown #dd itemsTextAlignment="center" verticalAlignment="center" hint="Country" class="dropdown" [items]="contry" [(ngModel)]="selectedIndex" (selectedIndexChanged)="onchange($event)" (opened)="onopen()" (closed)="onclose()" row="0 " colspan="2 "></DropDown>
+                                                    <!-- <Label text="Selected Index:" row="0" col="0 " fontSize="12" verticalAlignment="bottom"></Label> -->
+                                                    <!-- <TextField [text]="selectedIndex " row="1 " col="1"></TextField> -->
+                                                </GridLayout>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </GridLayout>
+
+
+                                <GridLayout row="2" class="username" rows="30,*">
+                                    <Label row="0" class="custom-font textfield-title" text="State/Region/Province" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                                </GridLayout>
+
+                                <GridLayout row="3" class="username" rows="30,*">
+                                    <Label row="0" class="custom-font textfield-title" text="City" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                                </GridLayout>
+                                <GridLayout row="4" rows="30,120" orientation="vertical" class="video-preview">
+                                    <Label row="0" text="Address" class="custom-font textfield-title" horizontalAlignment="left"></Label>
+                                    <GridLayout row="1" class="video-priview-desc1">
+                                        <TextView [(ngModel)]="categoryDesc" #categoryDescng="ngModel" style.placeholderColor="gray" returnKeyType="next" vericalAlignment="top"></TextView>
+                                    </GridLayout>
+                                </GridLayout>
+
+                                <GridLayout row="5" class="add-label" columns="auto,*">
+                                    <Label col="0" text="Add a label:" class="custom-font" verticalAlignment="center"></Label>
+                                    <TextField col="1" verticalAlignment="center" style.placeholderColor="gray" hint="Central office" returnKeyType="next" class="add-label-textfield"></TextField>
+                                </GridLayout>
+
+
+
+                                <GridLayout row="6" rows="30 *">
+                                    <Label row="0" class="custom-font textfield-title" text="Country" horizontalAlignment="left"></Label>
+                                    <GridLayout row="1" columns="auto,*" class="video-link" vericalAlignment="center">
+                                        <StackLayout col="1" verticalAlignment="center">
+                                            <StackLayout col="0 ">
+                                                <GridLayout rows="auto, auto, * " columns="auto,*">
+                                                    <DropDown #dd itemsTextAlignment="center" verticalAlignment="center" hint="Country" class="dropdown" [items]="contry" [(ngModel)]="selectedIndex" (selectedIndexChanged)="onchange($event)" (opened)="onopen()" (closed)="onclose()" row="0 " colspan="2 "></DropDown>
+                                                    <!-- <Label text="Selected Index:" row="0" col="0 " fontSize="12" verticalAlignment="bottom"></Label> -->
+                                                    <!-- <TextField [text]="selectedIndex " row="1 " col="1"></TextField> -->
+                                                </GridLayout>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </GridLayout>
+
+
+                                <GridLayout row="7" class="username" rows="30,*">
+                                    <Label row="0" class="custom-font textfield-title" text="State/Region/Province" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                                </GridLayout>
+
+                                <GridLayout row="8" class="username" rows="30,*">
+                                    <Label row="0" class="custom-font textfield-title" text="City" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                                </GridLayout>
+                                <GridLayout row="9" rows="30,120" orientation="vertical" class="video-preview">
+                                    <Label row="0" text="Address" class="custom-font textfield-title" horizontalAlignment="left"></Label>
+                                    <GridLayout row="1" class="video-priview-desc1">
+                                        <TextView [(ngModel)]="categoryDesc" #categoryDescng="ngModel" style.placeholderColor="gray" returnKeyType="next" vericalAlignment="top"></TextView>
+                                    </GridLayout>
+                                </GridLayout>
+
+                                <GridLayout row="10" class="add-label" columns="auto,*">
+                                    <Label col="0" text="Add a label:" class="custom-font" verticalAlignment="center"></Label>
+                                    <TextField col="1" verticalAlignment="center" style.placeholderColor="gray" hint="Central office" returnKeyType="next" class="add-label-textfield"></TextField>
+                                </GridLayout>
+
+                                <GridLayout row="11" columns="auto,auto" class="brand-videobtn-container" horizontalAlignment="center">
+                                    <Button col="0 " text="Reset " class="reset-button " (tap)="onreset()"> </Button>
+                                    <Button col="1 " text="Save " class="save-button "> </Button>
+                                </GridLayout>
+
+
+
+
+
+                            </GridLayout>
+                        </StackLayout>
+                    </ScrollView>
+                </TabContentItem>
+                <TabContentItem>
+
+                    <Label text="&#xf013; Services" class="fas"></Label>
+
+                </TabContentItem>
+                <TabContentItem>
+
+                    <Label text="&#xf013; Portfolio" class="fas"></Label>
+
+                </TabContentItem>
+                <TabContentItem>
+
+                    <Label text="&#xf013; Image-Gallery" class="fas"></Label>
+
+                </TabContentItem>
+                <TabContentItem>
+
+                    <Label text="&#xf013; Video-Gallery" class="fas"></Label>
+
+                </TabContentItem>
+                <TabContentItem>
+
+                    <app-products-tab></app-products-tab>
+
+                </TabContentItem>
+                <TabContentItem>
+
+                    <ScrollView top="0" left="0" width="100%" height="100%">
+                        <StackLayout class="brand-card-container">
+
+
+                            <GridLayout rows="80,80,80,80,80,80,80 ,80,100" class="brand-personaldetail-container">
+                                <GridLayout row="0" columns="*,*,*,*" margin="5dp 0">
+                                    <GridLayout rows="auto,auto" row="0" col="0" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/whatsapp.png" horizontalAlignment="center"></Image>
+                                        </GridLayout>
+                                        <Label row="1" text="Whatsspp" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+
+                                    <GridLayout rows="auto,auto" row="0" col="1" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/fb.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Facebook" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="2" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/insta.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Instagram" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="3" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/twitter.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Twitter" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+                                </GridLayout>
+
+                                <GridLayout row="1" columns="*,*,*,*" margin="5dp 0">
+                                    <GridLayout rows="auto,auto" row="0" col="0" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/signal.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Signal" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+
+                                    <GridLayout rows="auto,auto" row="0" col="1" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/koo.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Koo" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="2" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/snapshot.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Snapchat" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="3" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/linkdin.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Linkedin" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+                                </GridLayout>
+
+
+                                <GridLayout row="2" columns="*,*,*,*" margin="5dp 0">
+                                    <GridLayout rows="auto,auto" row="0" col="0" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/pdf_icon.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="PDF" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+
+                                    <GridLayout rows="auto,auto" row="0" col="1" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/youtube.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Youtube" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="2" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/tiktok.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Tiktok" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="3" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/link.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Link" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+                                </GridLayout>
+
+
+                                <GridLayout row="3" columns="*,*,*,*" margin="5dp 0">
+                                    <GridLayout rows="auto,auto" row="0" col="0" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/pintrest.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Pinterest" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+
+                                    <GridLayout rows="auto,auto" row="0" col="1" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/skype.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Skype" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="2" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/wechat.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="We Chat" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="3" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/website.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Website/ Other" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+                                </GridLayout>
+
+                                <GridLayout row="4" columns="*,*,*,*" margin="5dp 0">
+                                    <GridLayout rows="auto,auto" row="0" col="0" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/git.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Github" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+
+                                    <GridLayout rows="auto,auto" row="0" col="1" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/dribble.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Dribble" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="2" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/behance.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Behance" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="3" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/whatsapp.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Whatsapp" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+                                </GridLayout>
+
+
+
+                                <GridLayout row="5" columns="*,*,*,*" margin="5dp 0">
+                                    <GridLayout rows="auto,auto" row="0" col="0" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/gitlab.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Gitlab" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+
+                                    <GridLayout rows="auto,auto" row="0" col="1" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/portfolio.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Adobe Portfolio" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="2" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/website.png" horizontalAlignment="center"></Image>
+
+
+                                        </GridLayout>
+                                        <Label row="1" text="Website" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="3" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/razorpay.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Razorpay" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+                                </GridLayout>
+
+
+                                <GridLayout row="6" columns="*,*,*,*" margin="5dp 0">
+                                    <GridLayout rows="auto,auto" row="0" col="0" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/Qrcode.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="QR code" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+
+                                    <GridLayout rows="auto,auto" row="0" col="1" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/paypal.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Paypal" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="2" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/google-pay.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Google Pay" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+
+                                    <GridLayout rows="auto,auto" row="0" col="3" verticalAlignment="center">
+                                        <GridLayout row="0" class="social" verticalAlignment="center">
+                                            <Image src="~/assets/link-images/phonepe-logo.png" horizontalAlignment="center"></Image>
+
+                                        </GridLayout>
+                                        <Label row="1" text="Phone Pay" horizontalAlignment="center" class="social-text"></Label>
+
+                                    </GridLayout>
+                                </GridLayout>
+                                <GridLayout row="7" columns="auto,auto" class="brand-videobtn-container" horizontalAlignment="center">
+                                    <Button col="0 " text="Reset " class="reset-button " (tap)="onreset()"> </Button>
+                                    <Button col="1 " text="Save " class="save-button "> </Button>
+                                </GridLayout>
+
+
+
+                            </GridLayout>
+                        </StackLayout>
+                    </ScrollView>
+
+                </TabContentItem>
+
+
+            </Tabs>
+
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

@@ -1,0 +1,27 @@
+<ActionBar title="Gallery manager" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf060;" position="left" class="far actionbar-icon" (tap)="onback()"></NavigationButton>
+    <ActionItem icon="font://&#xf2ed;" class="fas actionbar-icon" ios.position="left" android.position="actionBar" (tap)="deleteVideo()"></ActionItem>
+
+</ActionBar>
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf060;" class="far" color="white" style="font-size: 25;text-align: center; "
+            verticalAlignment="center" (tap)="onback()"></Label>
+        <Label text="Gallery manager" color="white"
+            style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+        <Label text="&#xf2ed;" class="fas" color="white" style="font-size: 20;text-align: center; "
+            verticalAlignment="center" (tap)="deleteVideo()"></Label>
+    </StackLayout> -->
+
+    <StackLayout>
+
+        <StackLayout style="background-color: white;border-top-left-radius: 20;border-top-right-radius: 20;height: 100%;">
+
+            <YoutubePlayer *ngIf="videoId" apiKey="AIzaSyCDH3BGQZT2ebUfSE8D3I8NLqaCPu4FRh0" [src]="videoId" height="250" width="100%"></YoutubePlayer>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</GridLayout>

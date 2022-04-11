@@ -1,0 +1,135 @@
+.main-1 {
+    padding: 30% 0 30px 30px;
+    height: 100%;
+}
+
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
+.brand-addvieo-container .add-video .video-link .link {
+    font-size: 12dp;
+    /* color: rgb(0, 0, 0); */
+    margin-top: 10dp;
+}
+
+.brand-addvieo-container .add-video .youtube {
+    background-color: var(--fourth);
+    border-radius: 100%;
+    font-size: 24dp;
+    height: 40dp;
+    width: 40dp;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6dp 0 0;
+}
+
+.brand-addvieo-container .add-video {
+    background-color: white;
+    border-top-left-radius: 20;
+    border-top-right-radius: 20;
+    height: 100%;
+    padding: 10dp 15dp;
+}
+
+.backbutton {
+    font-size: 20dp;
+    text-align: left;
+    color: black;
+}
+
+.video-preview {
+    padding: 15dp 0dp;
+}
+
+.video-preview Label {
+    font-size: 14dp;
+    color: #525252;
+    font-weight: 600;
+}
+
+.video-preview Image {
+    border-radius: 10%;
+    border-width: 2px;
+    border-color: rgb(216, 212, 212);
+}
+
+.add-new-label {
+    border-bottom: rgb(216, 212, 212);
+    border-bottom-width: 2px;
+}
+
+.add-new-label Label {
+    font-size: 14dp;
+    color: #525252;
+    font-weight: 600;
+}
+
+.add-images-label {
+    margin: 10dp 0;
+}
+
+.add-new-label .Label-name {
+    font-size: 16dp;
+    color: black;
+}
+
+.add-new-label .edit-label {
+    font-size: 16dp;
+    color: var(--fourth)
+}
+
+.brand-projectname-container .name {
+    font-size: 12dp;
+    color: #626262;
+}
+
+.brand-projectname-container .project-name {
+    font-size: 14dp;
+    color: black;
+    margin: 10dp 0;
+    font-weight: 600;
+}
+
+.add-images-label .name1 {
+    font-size: 14dp;
+    color: #626262;
+}
+
+.add-images-label .name2 {
+    color: #626262;
+    font-size: 12dp;
+}
+
+.brand-addimage-container Image {
+    padding: 5dp;
+    border-width: 2px;
+    border-color: rgb(216, 212, 212);
+    margin: 0 3dp;
+    border-radius: 10dp;
+    height: 90dp;
+    width: 90dp;
+}
+
+.video-priview-desc Label {
+    font-size: 12dp;
+    color: rgb(0, 0, 0);
+    height: 100dp;
+    padding: 10dp;
+    background-color: lightgray;
+    border-radius: 10dp;
+}
+
+.video-preview {
+    margin: 15dp 0dp;
+}
+
+.active-switch {
+    color: green;
+}
+
+.inactive-switch {
+    color: var(--third);
+}

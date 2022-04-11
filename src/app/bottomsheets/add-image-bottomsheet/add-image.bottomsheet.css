@@ -1,0 +1,43 @@
+.main {
+    padding: 20px;
+}
+
+.h2 {
+    font-weight: bold;
+    font-size: 20dp;
+    height: 40dp;
+    border-bottom-width: 2px;
+    border-color: gray;
+}
+
+.backbutton {
+    font-size: 30dp;
+    text-align: left;
+    color: black;
+}
+
+.text {
+    color: black;
+    font-size: 16dp;
+    font-weight: 600;
+}
+
+.icon {
+    color: black;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 20dp;
+}
+
+.brand-bottomsheet-container {
+    border-radius: 20dp 20dp 0 0;
+    padding: 20dp;
+    background-color: white;
+}
+
+
+/* .bottomsheet {
+    border-radius: 20dp 20dp 0 0;
+    background-color: blue;
+    border-width: 2px;
+} */

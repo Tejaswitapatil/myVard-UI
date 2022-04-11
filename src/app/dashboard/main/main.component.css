@@ -1,0 +1,59 @@
+/* Add mobile styles for the component here.  */
+
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
+.fab-button {
+    height: 70;
+    width: 70;
+    margin: 15;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    horizontal-align: right;
+    vertical-align: bottom;
+}
+
+.text {
+    font-family: Open Sans, SemiBold;
+    font-size: 16dp;
+}
+
+
+/* TabStripItem.tabstrip:active {
+    background-color: var(--primary);
+    color: white;
+} */
+
+TabStripItem.tabstrip Label {
+    font-size: 14dp;
+    color: black;
+    border-radius: 30dp;
+}
+
+TabStrip {
+    selected-item-color: var(--secondary);
+    un-selected-item-color: white;
+    highlight-color: var(--secondary);
+}
+
+
+/* TabStripItem.tab {
+    background-color: blue;
+    color: white;
+}
+
+TabStripItem.tab:active {
+    background-color: red;
+    color: black;
+} */
+
+.main {
+    background-color: var(--primary);
+}
+
+.main-1 {
+    padding: 30% 0 30px 30px;
+    height: 100%;
+}

@@ -1,0 +1,67 @@
+<ScrollView style="background-color: white;">
+    <GridLayout rows="200,80,*,50,90,30,100,80" class="firstgrid">
+
+        <StackLayout row="0" class="brand-logo-container" verticalAlignment="center">
+            <Image src="~/assets/images/brand-logo.png"></Image>
+        </StackLayout>
+
+        <StackLayout row="1" class="brand-name-container">
+            <Label text="WELCOME Back," class="h2 custom-font-bold"></Label>
+            <Label text="Please Sign in to continue" class="text"></Label>
+        </StackLayout>
+
+        <StackLayout row="2" class="brand-textfield-container">
+
+
+            <GridLayout class="username" rows="30,*">
+                <Label row="0" class="custom-font textfield-title" text="Email Id/Mobile No" horizontalAlignment="left"></Label>
+                <TextField row="1" verticalAlignment="center" style.placeholderColor="gray" [(ngModel)]="username" #usernameng="ngModel" returnKeyType="next" keyboardType="email"></TextField>
+            </GridLayout>
+
+
+            <StackLayout rows="30,*">
+                <Label row="0" colspan="2" class="custom-font textfield-title" text="Your Password" horizontalAlignment="left"></Label>
+                <GridLayout row="1" columns="*, auto" class="password">
+                    <TextField col="0" verticalAlignment="center" style.placeholderColor="gray" [(ngModel)]="password" #passwordng="ngModel" [secure]="securePassword" returnKeyType="done"></TextField>
+                    <Label col="1" class="page-icon far" style="font-size: 15dp;" [text]="securePassword ? '&#xf070;' : '&#xf06e;'" verticalAlignment="center" (tap)="toggleShow()"></Label>
+                </GridLayout>
+            </StackLayout>
+
+        </StackLayout>
+
+
+        <StackLayout row="3" class="brand-forgot-container" orientation="horizontal">
+
+            <Label text="Forgot Password?" textAlignment="right" verticalAlignment="center" (tap)="forgotPassword()"></Label>
+
+        </StackLayout>
+
+        <StackLayout row="4" class="" orientation="vertical" class="brand-signin-container">
+            <Button text="Sign In" class="signin-button" (tap)="loginwithcredentials()"> </Button>
+        </StackLayout>
+
+        <StackLayout row="5" class="" orientation="vertical">
+            <Label text="Or Sign in with" horizontalAlignment="center" class="signinwith"> </Label>
+
+        </StackLayout>
+
+        <GridLayout row="6" columns="*,*,*" orientation="horizontal" horizontalAlignment="center" class="brand-social-container">
+            <Label text="OTP" col="0" backgroundColor="black" (tap)="onOTP()" class="social-icon otp"> </Label>
+            <Label text="&#xf39e;" col="1" class="fab social-icon fb" (tap)="loginwithfb()"> </Label>
+
+            <StackLayout class="social-icon google" col="2" (tap)="loginwithgoogle()">
+                <Image src="~/assets/images/login-google.png"></Image>
+            </StackLayout>
+
+            <!-- <Label text="&#xf1a0;" col="2" backgroundColor="#e6e7e7" (tap)="loginwithgoogle()" class="fab social-icon google"> </Label> -->
+
+        </GridLayout>
+        <StackLayout row="7 " class=" accounttext " orientation="horizontal" horizontalAlignment="center" verticalAlignment="center">
+            <Label text="Don't have an account?" class="signinwithacc"> </Label>
+            <Label text=" Sign Up" class="signinwithacc1" (tap)="onsignup()"> </Label>
+
+        </StackLayout>
+
+    </GridLayout>
+
+</ScrollView>

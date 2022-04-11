@@ -1,0 +1,56 @@
+<ActionBar title="Edit Profile" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf060;" position="left" class="far actionbar-icon"></NavigationButton>
+
+</ActionBar>
+
+<GridLayout class="" rows="*">
+
+    <StackLayout row='0'>
+
+        <StackLayout style="background-color: white;border-top-left-radius: 20;border-top-right-radius: 20;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <StackLayout row='1' class="brand-addvieo-container">
+
+
+                        <GridLayout rows="50,200,130,*,200" class="firstgrid">
+
+
+                            <StackLayout row="0">
+                                <Label text="&#xf060;" class="fas backarrow" (tap)="Goback()"></Label>
+                            </StackLayout>
+                            <StackLayout row="1" class="brand-logo-container" verticalAlignment="center">
+                                <Image src="~/assets/images/login-images/email.png" verticalAlignment="center"></Image>
+
+                            </StackLayout>
+
+                            <StackLayout row="2" class="brand-name-container">
+
+                                <Label text="Enter your E-mail Id" class="h2 custom-font-bold"></Label>
+                                <Label text="Enter your email for the verification process, we will send 4 digit code to your email." horizontalAlignment="left" width="90%" class="text custom-font" textWrap="true"></Label>
+                            </StackLayout>
+
+
+
+                            <StackLayout row="3" class="brand-textfield-container">
+
+                                <GridLayout class="username" rows="30 ,*">
+                                    <Label row="0" class="custom-font textfield-title" text="Email Id" horizontalAlignment="left"></Label>
+                                    <TextField row="1" verticalAlignment="center" disabled="true" [(ngModel)]="email" #emailng="ngModel" style.placeholderColor="gray" returnKeyType="done" keyboardType="email"></TextField>
+                                </GridLayout>
+
+                            </StackLayout>
+
+                            <StackLayout row="4" class="brand-signin-container" verticalAlignment="bottom">
+                                <Button text="Continue" class="signin-button" (tap)="onGetOTP()"> </Button>
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </ScrollView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

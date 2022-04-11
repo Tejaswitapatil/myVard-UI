@@ -1,0 +1,42 @@
+<ActionBar title="Edit Profile" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf060;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+
+</ActionBar>
+
+<GridLayout class="" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf060;" class="far" color="white" style="font-size: 22;text-align: center;" verticalAlignment="center" (tap)="onback()"></Label>
+        <Label text="My Profile" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout row='0'>
+
+        <StackLayout style="background-color: white;border-top-left-radius: 20;border-top-right-radius: 20;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <StackLayout row='1' class="brand-addvieo-container" verticalAlignment="center">
+                        <GridLayout rows="100,300," class="firstgrid">
+
+                            <StackLayout row="0" class="brand-name-container" verticalAlignment="bottom" horizontalAlignment="center">
+
+                                <Label text="Password Updated!" class="h2 custom-font-bold"></Label>
+                                <Label text="Your password has been updated successfully, Enjoy!" horizontalAlignment="left" width="90%" class="text custom-font" textWrap="true"></Label>
+
+                            </StackLayout>
+
+                            <StackLayout row="1" horizontalAlignment="center" verticalAlignment="center" class="brand-otp-verified-container">
+
+                                <Label text="&#xf00c;" class="fas check-icon"></Label>
+
+                            </StackLayout>
+
+                        </GridLayout>
+                    </StackLayout>
+                </ScrollView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

@@ -1,0 +1,98 @@
+<GridLayout class="main" rows="*">
+
+
+    <StackLayout>
+
+        <StackLayout style="background-color: white;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <GridLayout rows="50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50" class="brand-category-container">
+
+                        <Label row="0" text="Plan" class="title custom-font-bold" verticalAlignment="center"></Label>
+                        <GridLayout row="1" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Plan name" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <Label row="2" text="Contacts" class="title custom-font-bold" verticalAlignment="center"></Label>
+                        <GridLayout row="3" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Sync contacts" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="4" columns="*,auto" class="subtitle-box">
+                            <Label col="0" text="Auto Sync" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <!-- <Switch col="1" color="#0094FF" backgroundColor="black" horizontalAlignment="left" verticalAlignment="top"></Switch> -->
+                            <Switch (tap)="toggleStatus()" [checked]="isActive" col="1" [ngClass]="isActive == true ? 'active-switch' : 'inactive-switch' " backgroundColor="gray" horizontalAlignment="left" verticalAlignment="top"></Switch>
+                        </GridLayout>
+                        <Label row="5" text="Others" class="title custom-font-bold" verticalAlignment="center"></Label>
+                        <GridLayout row="6" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Sync contacts" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="7" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Tips" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="8" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Permissions" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="9" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Feedback" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="10" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Contact Support" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="11" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Privacy Policy" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="12" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Version" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="13" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Check for update" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <Label row="14" text="Follow US" class="title custom-font-bold" verticalAlignment="center"></Label>
+                        <GridLayout row="15" columns="auto,auto" class="subtitle-box" padding="0dp 20dp">
+                            <Label col="0" text="&#xf099;" class=" far social-icon " verticalAlignment="center" horizontalAlignment="left"></Label>
+                            <Label col="1" text="Twitter" class=" custom-font subtitle" verticalAlignment="center" horizontalAlignment="right"></Label>
+                        </GridLayout>
+                        <GridLayout row="16" columns="auto,auto" class="subtitle-box" padding="0dp 20dp">
+                            <Label col="0" text="&#xf39e;" class=" fab social-icon facebook " verticalAlignment="center" horizontalAlignment="left"></Label>
+                            <Label col="1" text="Facebook" class=" custom-font subtitle" verticalAlignment="center" horizontalAlignment="right"></Label >
+                        </GridLayout>
+                        <GridLayout row="17" columns="auto,auto" class="subtitle-box" padding="0dp 20dp">
+                            <Label col="0" text="&#xf0e1;" class=" far social-icon linkdin" verticalAlignment="center" horizontalAlignment="left"></Label>
+                            <Label col="1" text="Linkedin" class=" custom-font subtitle" verticalAlignment="center" horizontalAlignment="right"></Label>
+                        </GridLayout>
+                        <Label row="18" text="Account" class="title custom-font-bold" verticalAlignment="center"></Label>
+                        <GridLayout row="19" columns="auto,*" class="subtitle-box">
+                            <Label col="0" text="Email" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="akshay007@gmail.com" class=" custom-font subtitle" verticalAlignment="center" horizontalAlignment="right"></Label>
+                        </GridLayout>
+                        <GridLayout row="20" columns="*,30" class="subtitle-box">
+                            <Label col="0" text="Reset password" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf054;" class=" subtitle-icon fas" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="21" columns="*,auto" class="subtitle-box">
+                            <Label col="0" text="Log out" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf08b;" class=" subtitle-icon far" style="font-size:20dp;  padding-right: 20dp;" verticalAlignment="center"></Label>
+                        </GridLayout>
+                        <GridLayout row="22" columns="*,auto" class="subtitle-box">
+                            <Label col="0" text="Delete account" class="custom-font subtitle" verticalAlignment="center"></Label>
+                            <Label col="1" text="&#xf1f8;" class=" subtitle-icon far" style="font-size:20dp; padding-right: 20dp;" verticalAlignment="center"></Label>
+                        </GridLayout>
+
+
+                    </GridLayout>
+                </ScrollView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

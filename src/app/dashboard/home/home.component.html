@@ -1,0 +1,71 @@
+<!-- <ScrollView> -->
+
+<GridLayout class="main">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+            <Label text="&#xf0c9;" class="far" color="white" style="font-size: 25;text-align: center; " verticalAlignment="center" (tap)="onToggleMenu()"></Label>
+            <Label text="Home" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+            <Label text="&#xf0f3;" class="far" color="white" style="font-size: 20;text-align: center; " verticalAlignment="center"></Label>
+    
+        </StackLayout> -->
+
+
+    <StackLayout>
+
+        <StackLayout style="background-color: white;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <GridLayout rows="80,auto" class="brand-home-container">
+
+                        <GridLayout row="0" rows="30,30" class="home-container">
+                            <Label row="0" text="Welcome!" class="custom-font-bold "></Label>
+                            <Label row="1" [text]="name" class="custom-font-bold"></Label>
+                        </GridLayout>
+
+
+
+                        <WrapLayout row="1" columns="*,*" class="brand-profile-container" horizontalAlignment="center">
+
+                            <StackLayout rows="auto,50" col="0" class="profile-container">
+                                <!-- <GridLayout row="0" class="Image-container"> -->
+                                <Image row="0" stretch="aspectFill" src="https://vvm.org.in/assets/images/comeetee_members/Mayuri_Dutt.jpg"></Image>
+                                <!-- </GridLayout> -->
+                                <StackLayout row="1" class="name-container">
+
+                                    <Label row="1" text="Professional Card" class="custom-font" verticalAlignment="center" horizontalAlignment="center"></Label>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout rows="auto,100" col="0" class="profile-container">
+                                <!-- <GridLayout row="0" class="Image-container"> -->
+                                <Image row="0" stretch="aspectFill" src="https://vvm.org.in/assets/images/comeetee_members/Mayuri_Dutt.jpg"></Image>
+                                <!-- </GridLayout> -->
+                                <StackLayout row="1" class="name-container">
+
+                                    <Label row="1" text="Personal Card" class="custom-font" verticalAlignment="center" horizontalAlignment="center"></Label>
+                                </StackLayout>
+                            </StackLayout>
+
+                        </WrapLayout>
+
+                    </GridLayout>
+                </ScrollView>
+
+                <AbsoluteLayout left="0" top="0" width="100%" height="100%">
+                    <!-- <Fab #btnb text="&#xf07b;" left="300" top="500" rippleColor="#f1f1f1" class="fab-button btnb far">
+                        </Fab>
+                        <Fab #btna text="&#xf030;" left="300" top="500" rippleColor="#f1f1f1" class="fab-button btna far">
+                        </Fab> -->
+                    <FAB (tap)="displayOptions()" #fab text="&#xf067;" [left]="left" [top]="top" rippleColor="#f1f1f1" class="fab-button far">
+                    </FAB>
+                </AbsoluteLayout>
+
+            </AbsoluteLayout>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>
+
+
+
+<!-- </ScrollView> -->

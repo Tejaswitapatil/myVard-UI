@@ -1,0 +1,139 @@
+<ActionBar title="Portfolio Manager" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+
+</ActionBar>
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 22;text-align: center;" verticalAlignment="center" (tap)="onToggleMenu()"></Label>
+        <Label text="Portfolio Manager" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout>
+
+        <StackLayout style="background-color: white;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <StackLayout row='1' class="brand-addvieo-container">
+
+
+                        <GridLayout rows="50,50,130,auto,auto,auto,auto,auto,auto,100" class="add-video">
+
+                            <Label row="0" text="&#xf060;" class="far backbutton custm-font" verticalAlignment="center" horzontalAlignment="left" (tap)="onback()"></Label>
+
+                            <GridLayout row="1" columns="*,auto,auto" class="add-new-label">
+                                <Label col="0" class="custom-font" text="Edit My Project" verticalAlignment="center"></Label>
+                                <Label col="1" class="custom-font" color="green" *ngIf="isActive" text="Active" verticalAlignment="center"></Label>
+                                <Label col="1" class="custom-font" color="red" *ngIf="!isActive" text="Inactive" verticalAlignment="center"></Label>
+                                <Switch (tap)="toggleStatus()" [checked]="isActive" [ngClass]="isActive == true ? 'active-switch' : 'inactive-switch' " col="2" backgroundColor="gray" horizontalAlignment="left" verticalAlignment="top"></Switch>
+                            </GridLayout>
+
+                            <GridLayout class="username" row="2" rows="30,*">
+                                <!-- <span text="*" style="color:red; font-size:16dp;"></span> -->
+                                <GridLayout row="0" columns="auto,auto">
+                                    <Label text="*" col="0" style="color:red; font-size:16dp;" horizontalAlignment="left"></Label>
+                                    <Label col="1" class="custom-font textfield-title" verticalAlignment="center" text="Project Name" horizontalAlignment="right"></Label>
+                                </GridLayout>
+                                <TextField row="1" [(ngModel)]="projectName" #projectNameng="ngModel" verticalAlignment="center" hint="Project Name" style.placeholderColor="gray" returnKeyType="next"></TextField>
+                            </GridLayout>
+
+
+
+
+                            <GridLayout row="3" class="add-images-label" columns="auto,auto,*">
+                                <Label text="*" col="0" style="color:red; font-size:16dp;" horizontalAlignment="left"></Label>
+                                <Label text="Add Images:" col="1" class="custom-font name1" verticalAlignment="center" horizontalAlignment="left"></Label>
+                                <Label text="Max. 5 Images" col="2" class="custom-font name2" verticalAlignment="center" horizontalAlignment="right"></Label>
+                            </GridLayout>
+
+                            <!-- <Gridlayout row="4" class="brand-addimage-container" verticalAlignment="center"
+                                horizontalAlignment="left" columns="auto,auto">
+                                <Stacklayout col="0" class="add-image" verticalAlignment="center" (tap)="onselectImages()"
+                                    horizontalAlignment="center">
+                                    <Label text="Add Images"></Label>
+                                </Stacklayout>
+                                <ScrollView col="1"> 
+                                    <Stacklayout orientation="horizontal">
+                                        <Image style="margin: 2dp;background-color: transparent;" src="https://vvm.org.in/assets/images/Vigyan-Prasar.png" class="add-image"></Image>
+                                        <Image style="margin: 2dp;background-color: transparent;" src="https://vvm.org.in/assets/images/Vigyan-Prasar.png" class="add-image"></Image>
+                                        <Image style="margin: 2dp;background-color: transparent;" src="https://vvm.org.in/assets/images/Vigyan-Prasar.png" class="add-image"></Image>
+                                        <Image style="margin: 2dp;background-color: transparent;" src="https://vvm.org.in/assets/images/Vigyan-Prasar.png" class="add-image"></Image>
+                                    </Stacklayout>
+                                </ScrollView>
+                            </Gridlayout> -->
+
+                            <ScrollView row="4" orientation="horizontal">
+                                <Gridlayout class="brand-addimage-container" verticalAlignment="center" horizontalAlignment="left" columns="auto,auto">
+                                    <Stacklayout col="0" class="add-image" verticalAlignment="center" (tap)="onselectImages()" horizontalAlignment="center">
+                                        <Label text="Add Images"></Label>
+                                    </Stacklayout>
+
+                                    <Stacklayout orientation="horizontal" col="1">
+                                        <Image style="margin: 2dp;background-color: transparent;" *ngFor="let image of currentImages" [src]="image" class="add-image">
+                                        </Image>
+                                    </Stacklayout>
+
+
+                                </Gridlayout>
+
+                            </ScrollView>
+
+                            <StackLayout row="5" rows="30,*">
+                                <Label row="0" margin="10dp 0" class="custom-font textfield-title" verticalAlignment="center" text="Enter URL/WEBLINK" horizontalAlignment="left"></Label>
+
+                                <GridLayout row="1" columns="70,*" class="video-link">
+                                    <StackLayout col="0" style="text-align: center;" verticalAlignment="center">
+                                        <Label text="&#xf0ac;" class="fas youtube1" verticalAlignment="bottom"></Label>
+                                    </StackLayout>
+                                    <StackLayout col="1" verticalAlignment="center">
+                                        <TextField [(ngModel)]="projectUrl" #projectUrlng="ngModel" verticalAlignment="bottom" hint="Enter URL/WEBLINK" style.placeholderColor="gray" returnKeyType="done"></TextField>
+                                    </StackLayout>
+                                </GridLayout>
+                            </StackLayout>
+                            <StackLayout row="6" rows="30,*">
+                                <Label row="0" margin="10dp 0" class="custom-font textfield-title" verticalAlignment="center" text="Enter YouTube link" horizontalAlignment="left"></Label>
+
+                                <GridLayout row="1" columns="70,*" class="video-link">
+
+                                    <StackLayout col="0" style="text-align: center;" verticalAlignment="center">
+                                        <Label text="&#xf167;" class="fab youtube" verticalAlignment="bottom"></Label>
+                                    </StackLayout>
+                                    <StackLayout col="1" verticalAlignment="center">
+                                        <TextField (returnPress)='onyoutubeSrc()' [(ngModel)]="youtubeSrc" #youtubeSrcng="ngModel" verticalAlignment="bottom" style.placeholderColor="gray" returnKeyType="done"></TextField>
+                                    </StackLayout>
+                                </GridLayout>
+                            </StackLayout>
+
+
+                            <GridLayout row="7" rows="30,120" orientation="vertical" class="video-preview">
+                                <Label row="0" text="Project Description:" class="custom-font name1" horizontalAlignment="left"></Label>
+                                <GridLayout row="1" class="video-priview-desc">
+                                    <TextView [(ngModel)]="projectDesc" #projectDescng="ngModel" style.placeholderColor="gray" returnKeyType="next" vericalAlignment="top">
+                                    </TextView>
+                                </GridLayout>
+                            </GridLayout>
+
+
+
+
+                            <GridLayout row="8" rows="30,*" *ngIf="youtubeVideoId" orientation="vertical" class="video-preview">
+                                <Label row="0" class="custom-font " text="Video Preview:"></Label>
+                                <Image row="1" [src]="getPreviewImage(youtubeVideoId)" verticalalignment="center">
+                                </Image>
+                            </GridLayout>
+
+                            <GridLayout row="9" columns="auto,auto" class="brand-videobtn-container" horizontalAlignment="center">
+                                <Button col="0" text="Reset" class="reset-button" (tap)="onreset()"></Button>
+                                <Button col="1" text="Update" class="save-button" (tap)="updateProject()"></Button>
+                            </GridLayout>
+
+
+                        </GridLayout>
+                    </StackLayout>
+                </ScrollView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

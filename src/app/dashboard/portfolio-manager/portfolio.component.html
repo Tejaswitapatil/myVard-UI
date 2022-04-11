@@ -1,0 +1,79 @@
+<ActionBar title="Portfolio manager" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf0c9;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+
+</ActionBar>
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 22;text-align: center;"
+            verticalAlignment="center" (tap)="onToggleMenu()"></Label>
+        <Label text="Portfolio manager" color="white"
+            style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout >
+
+        <StackLayout
+            style="background-color: rgb(255, 255, 255);height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+
+                    <StackLayout row="1" class="brand-category-container" *ngIf="projects">
+                        <Label text="Available Projects:" class="title custom-font"></Label>
+                        <CardView ripple="true" class="category-card" *ngFor="let image of projects;let i=index">
+                            <GridLayout orientation="horizontal" class="card1" columns="130,*,auto" 
+                                rows="auto,auto,auto,auto">
+                                <Image rowSpan="4" col="0" row="0" [src]="image.image[0]" class="category-image" (tap)="Goview(image)"
+                                    verticalAlignment="center"></Image>
+
+                                <Label col="1" row="0" textWrap="true" class="name custom-font" (tap)="Goview(image)"
+                                    [text]="image.name"></Label>
+                                <Label col="2" row="0" text="&#xf1f8;" class="fas delete" horizontalAlignment="right"
+                                    (tap)='onDelete(image)' verticalAlignment="center"></Label>
+
+                                <Label col="1" colspan="2" row="1" class="subtitle custom-font" textwrap="true" (tap)="Goview(image)"
+                                    [text]="image.description"></Label>
+
+                                <WrapLayout colSpan="2" col="1" row="2" orientation="horizontal"
+                                    class="port-image-container">
+                                    <Image [src]="image.image[1]" class="port-img" 
+                                        verticalAlignment="center" horizontalAlignment="left"></Image>
+                                    <Image [src]="image.image[2]" class="port-img"
+                                        verticalAlignment="center" horizontalAlignment="left"></Image>
+                                    <Image [src]="image.image[3]" class="port-img"
+                                        verticalAlignment="center" horizontalAlignment="left"></Image>
+                                </WrapLayout>
+
+                                <GridLayout row="3" col="1" columns="*,*,*">
+                                    <Switch [checked]="!image.status" col="0" (tap)="toggleStatus(i)" [ngClass]="image.status == true ? 'active-switch' : 'inactive-switch' "
+                                         horizontalAlignment="left" style=" margin: 5dp 0dp;">
+                                    </Switch>
+                                    <Label col="1" *ngIf="image.status" text="Active" color="green" verticalAlignment="center"></Label>
+                                    <Label col="1" *ngIf="!image.status" text="Inactive" color="red" verticalAlignment="center"></Label>
+                                    <Label col="2" text="Edit" class="edit" (tap)="Goedit(image)"
+                                        verticalAlignment="center"></Label>
+                                </GridLayout> 
+
+                            </GridLayout>
+                        </CardView>
+                    </StackLayout>
+
+                </ScrollView>
+
+                <AbsoluteLayout left="0" top="0" width="100%" height="100%">
+                    <Button (tap)="OnTap()" #fab text="&#xf067; Add Project" [left]="left" [top]="top"
+                        rippleColor="#f1f1f1" class="fab-button far"></Button>
+                    <!-- <FAB (tap)="OnTap()" #fab text="&#xf067;" [left]="left" [top]="top" rippleColor="#f1f1f1"
+                        class="fab-button far">
+                    </FAB> -->
+                </AbsoluteLayout>
+
+            </AbsoluteLayout>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</GridLayout>

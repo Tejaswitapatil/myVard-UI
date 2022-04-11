@@ -1,0 +1,19 @@
+/* Add mobile styles for the component here.  */
+
+button {
+    font-size: 15;
+    horizontal-align: center;
+}
+
+TabStripItem.tabstrip Label {
+    background-color: white;
+    font-size: 14dp;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+TabStrip {
+    selected-item-color: var(--secondary);
+    un-selected-item-color: white;
+    highlight-color: var(--secondary);
+}

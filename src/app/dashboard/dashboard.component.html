@@ -1,0 +1,83 @@
+<RadSideDrawer tkExampleTitle tkToggleNavButton [showOverNavigation]="true" #radDrawer drawerContentSize="330">
+    <GridLayout tkDrawerContent rows="200,*,60" class="sideStackLayout brand-drawer-container" width="80%">
+
+        <StackLayout class="sideTitleStackLayout brand-drawerpic-container">
+            <Image [src]="profileImage" horizontalAlignment="left" verticalAlignment="center"></Image>
+            <Label [text]="name" class="profile-name custom-font-bold"></Label>
+            <Label [text]="username" class="profile-email custom-font"></Label>
+        </StackLayout>
+        <ScrollView row="1">
+            <StackLayout class="sideStackLayout brand-navigation-container">
+
+                <StackLayout orientation="horizontal" verticalAlignment="center" class="sideLabel" (tap)="home()">
+                    <StackLayout style=" width: 35dp">
+                        <Label class="page-icon fas " text="&#xf007;"> </Label>
+                    </StackLayout>
+                    <Label text="Home" class="page-name custom-font"
+                        [ngClass]="navItem === '/dashboard' ? 'activeL' : 'page-name' "></Label>
+                </StackLayout>
+                <StackLayout orientation="horizontal" verticalAlignment="center" class="sideLabel"
+                    (tap)="servicemanager()">
+                    <StackLayout style=" width: 35dp">
+                        <Label class="page-icon fas " text="&#xf0f2;"> </Label>
+                    </StackLayout>
+                    <Label text="Service Manager" class="page-name custom-font"
+                        [ngClass]="navItem === '/dashboard/service' ? 'activeL' : 'page-name' "></Label>
+                </StackLayout>
+                <StackLayout orientation="horizontal" verticalAlignment="center" class="sideLabel"
+                    (tap)="portfoliomanager()">
+                    <StackLayout style=" width: 35dp">
+                        <Label class="page-icon fas" text="&#xf0b1;"> </Label>
+                    </StackLayout>
+                    <Label text="Portfolio Manager" class="page-name custom-font"
+                        [ngClass]="navItem === '/dashboard/portfolio' ? 'activeL' : 'page-name' "></Label>
+                </StackLayout>
+                <StackLayout orientation="horizontal" verticalAlignment="center" class="sideLabel"
+                    (tap)="gallerymanager()">
+                    <StackLayout style=" width: 35dp">
+                        <Label class="page-icon fas " text="&#xf302;"> </Label>
+                    </StackLayout>
+                    <Label text="Gallery Manager" class="page-name custom-font"
+                        [ngClass]="navItem === '/dashboard/gallery' ? 'activeL' : 'page-name' "></Label>
+                </StackLayout>
+                <StackLayout orientation="horizontal" verticalAlignment="center" class="sideLabel"
+                    (tap)="productmanager()">
+                    <StackLayout style=" width: 35dp">
+                        <Label class="page-icon fas " text="&#xf54e;"> </Label>
+                    </StackLayout>
+                    <Label text="Product Manager" class="page-name custom-font"
+                        [ngClass]="navItem === '/dashboard/product' ? 'activeL' : 'page-name' "></Label>
+                </StackLayout>
+                <StackLayout orientation="horizontal" verticalAlignment="center" class="sideLabel">
+                    <StackLayout style=" width: 35dp">
+                        <Label class="page-icon fas " text="&#xf15c;"> </Label>
+                    </StackLayout>
+                    <Label text="Terms & Conditions" class="page-name custom-font"></Label>
+                </StackLayout>
+                <StackLayout orientation="horizontal" verticalAlignment="center" class="sideLabel">
+                    <StackLayout style=" width: 35dp">
+                        <Label class="page-icon far " text="&#xf132;"> </Label>
+                    </StackLayout>
+                    <Label text="Privacy Policy" class="page-name custom-font"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        <GridLayout row="2" columns="*,*" class="brand-drawerbottom-container" verticalAlignment="center">
+            <StackLayout col="0" orientation="horizontal" verticalAlignment="center" (tap)="alertLogout()"
+                class="bottom-label">
+                <StackLayout style=" width: 35dp ">
+                    <Label class="logout-icon fas " text="&#xf2f5;"></Label>
+                </StackLayout>
+                <Label text="Logout" class="logout-name custom-font"></Label>
+            </StackLayout>
+            <Label col="1" text="App version - 1.0" class="app-version custom-font" verticalAlignment="center"></Label>
+
+        </GridLayout>
+
+    </GridLayout>
+
+    <StackLayout tkMainContent>
+        <router-outlet></router-outlet>
+    </StackLayout>
+
+</RadSideDrawer>

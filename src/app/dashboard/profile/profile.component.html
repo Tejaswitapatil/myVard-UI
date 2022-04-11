@@ -1,0 +1,63 @@
+<GridLayout class="main" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf0c9;" class="far" color="white" style="font-size: 22;text-align: center;" (tap)="onToggleMenu()"></Label>
+        <Label text="My Profile" color="white" style="font-size:20dp; font-weight:700;text-align: left;padding-left: 20px;width: 80%; "></Label>
+        <Label text="&#xf304;" class="fas edit-label" (tap)="Goedit()" horizontalAlignment="right" style="color:white; font-size:20dp;"></Label>
+    </StackLayout> -->
+
+    <StackLayout>
+
+        <StackLayout style="background-color: white;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <StackLayout rows="200,50,100,100,100,100,100,100" class="brand-category-container">
+                        <GridLayout row="0" orientation="vertical" class="brand-profileimg-container">
+                            <Image row="0" [src]="image" horizontalAlignment="center"></Image>
+                            <Label text="&#xf030;" class="fas camera-icon" verticalAlignment="bottom" horizontalAlignment="right"></Label>
+
+
+
+                        </GridLayout>
+                        <Label row="1" [text]="name" class="custom-font-bold name" horizontalAlignment="center" verticalAlignment="center"></Label>
+                        <StackLayout row="2">
+                            <Label text="Personal details:" class=" custom-font-bold title" verticalAlignment="center"></Label>
+
+                        </StackLayout>
+                        <StackLayout row="3" columns="40,*" orientation="horizontal" class="brand-profiledetails-container">
+                            <Label col="0" text="&#xf0e0;" class="fas profile-icon" verticalAlignment="center" horizontalAlignment="left"></Label>
+
+                            <Label col="1" [text]="email" class="profiledetails custom-font" verticalAlignment="center" horizontalAlignment="center"></Label>
+
+                        </StackLayout>
+                        <StackLayout row="4" columns="40,*" orientation="horizontal" class="brand-profiledetails-container">
+                            <Label col="0" text="&#xf095;" class="far profile-icon" verticalAlignment="center" horizontalAlignment="left"></Label>
+
+                            <Label col="1" [text]="mobile" class="profiledetails custom-font" verticalAlignment="center" horizontalAlignment="center"></Label>
+
+                        </StackLayout>
+                        <StackLayout row="5" columns="40,*" orientation="horizontal" class="brand-profiledetails-container">
+                            <Label col="0" text="&#xf224;" class="fas profile-icon" verticalAlignment="center" horizontalAlignment="left"></Label>
+
+                            <Label col="1" [text]="gender" class="profiledetails custom-font" verticalAlignment="center" horizontalAlignment="center"></Label>
+
+                        </StackLayout>
+                        <StackLayout row="6" columns="40,*" orientation="horizontal" class="brand-profiledetails-container">
+                            <Label col="0" text="&#xf043;" class="fas profile-icon" verticalAlignment="center" horizontalAlignment="left"></Label>
+
+                            <Label col="1" [text]="bloodgroup" class="profiledetails custom-font" verticalAlignment="center" horizontalAlignment="center"></Label>
+
+                        </StackLayout>
+                        <StackLayout row="7" columns="40,*" orientation="horizontal" class="brand-profiledetails-container">
+                            <Label col="0" text="&#xf133;" class="fas profile-icon" verticalAlignment="center" horizontalAlignment="left"></Label>
+
+                            <Label col="1" [text]="dobText" class="profiledetails custom-font" verticalAlignment="center" horizontalAlignment="center"></Label>
+
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

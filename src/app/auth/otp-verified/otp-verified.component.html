@@ -1,0 +1,17 @@
+<ScrollView style="background-color: white;">
+    <GridLayout rows="300,100," verticalAlignment="center">
+
+
+        <StackLayout row="0" horizontalAlignment="center" verticalAlignment="center"
+            class="brand-otp-verified-container">
+
+            <LottieView width="150" height="200" [src]="src" [loop]="loop" [autoPlay]="autoPlay"
+                (loaded)="lottieViewLoaded($event)"></LottieView>
+
+        </StackLayout>
+        <StackLayout row="1" horizontalAlignment="center">
+            <Label text="OTP Verified Successfully!" class="otp-text"></Label>
+        </StackLayout>
+    </GridLayout>
+
+</ScrollView>

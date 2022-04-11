@@ -1,0 +1,142 @@
+ScrollView {
+    margin-top: 5%;
+}
+
+
+/* .brand-logo-container {} */
+
+.brand-logo-container Image {
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    height: 100dp;
+    width: 100dp;
+}
+
+.backarrow {
+    font-size: 20dp;
+    color: black;
+}
+
+.firstgrid {
+    padding: 30% 20%;
+}
+
+.h2 {
+    font-weight: 700;
+    font-size: 18dp;
+    color: rgb(17, 17, 17);
+}
+
+.text {
+    font-size: 16dp;
+    color: #525252;
+    font-weight: 600;
+}
+
+.brand-textfield-container {
+    padding: 0px 10px;
+}
+
+
+/* .textfield-title {
+    font-size: 14dp;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+} */
+
+.brand-textfield-container .username TextField {
+    font-size: 14dp;
+    border-color: gray;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    border-width: 2px;
+    height: 60dp;
+    /* padding-left: 40px; */
+    width: 100%;
+    padding: 0px 40px;
+}
+
+
+/* .brand-textfield-container .mobile {
+    margin: 0px 0px 40px 0px;
+} */
+
+.brand-textfield-container .mobile TextField {
+    font-size: 14dp;
+    border-color: gray;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    border-width: 2px;
+    height: 60dp;
+    /* padding-left: 40px; */
+    width: 100%;
+    padding: 0px 40px;
+}
+
+.brand-textfield-container .password TextField {
+    font-size: 14dp;
+    border-color: transparent;
+    color: black;
+    height: 60dp;
+    padding-left: 10px;
+    /* padding-right: 40px; */
+}
+
+.brand-textfield-container .password {
+    font-size: 16dp;
+    border-color: gray;
+    color: black;
+    border-radius: 20px;
+    border-width: 2px;
+    height: 60dp;
+    margin: 25px 0px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+.signin-button {
+    background-color: var(--primary);
+    text-align: center;
+    color: white;
+    font-size: 16dp;
+    border-radius: 10;
+    font-weight: 600;
+    margin-top: 15%;
+    width: 100%;
+}
+
+.brand-signin-container {
+    padding: 5% 0%;
+}
+
+.signinwithacc {
+    font-size: 14dp;
+    margin: 10% 0%;
+    font-weight: 600;
+}
+
+.signinwithacc1 {
+    font-size: 16dp;
+    margin: 10% 0%;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.accounttext {
+    border-top-width: 4px;
+    border-color: #d4d1d1;
+    width: 80%;
+    border-style: solid;
+}
+
+.dropdown-box {
+    border-right-width: 3px;
+    border-color: gray;
+}
+
+.dropdown {
+    margin: 10dp 0 0;
+    font-size: 14dp;
+    color: black;
+}

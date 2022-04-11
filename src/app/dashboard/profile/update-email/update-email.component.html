@@ -1,0 +1,60 @@
+<ActionBar title="Edit Profile" class="actionbar-container">
+
+    <NavigationButton icon="font://&#xf060;" position="left" class="far actionbar-icon" (tap)="onToggleMenu()"></NavigationButton>
+
+</ActionBar>
+
+<GridLayout class="" rows="*">
+    <!-- <StackLayout row='0' orientation="horizontal" class="main-1">
+        <Label text="&#xf060;" class="far" color="white" style="font-size: 22;text-align: center;" verticalAlignment="center" (tap)="onback()"></Label>
+        <Label text="My Profile" color="white" style="font-size:19dp;text-align: left;padding-left: 20px;width: 80%; " verticalAlignment="center"></Label>
+    </StackLayout> -->
+
+    <StackLayout row='0'>
+
+        <StackLayout style="background-color: white;border-top-left-radius: 20;border-top-right-radius: 20;height: 100%;">
+
+            <AbsoluteLayout width="100%" height="100%">
+
+                <ScrollView top="0" left="0" width="100%" height="100%">
+                    <StackLayout row='1' class="brand-addvieo-container">
+
+
+                        <GridLayout rows="50,200,100,200" class="firstgrid">
+
+                            <StackLayout row="0">
+                                <Label text="&#xf060;" class="fas backarrow" (tap)="Goback()"></Label>
+                            </StackLayout>
+                            <StackLayout row="1" class="brand-logo-container" verticalAlignment="center">
+                                <Image src="~/assets/images/login-images/email.png" verticalAlignment="center"></Image>
+
+                            </StackLayout>
+
+                            <StackLayout row="2" class="brand-name-container">
+
+                                <Label text="Update email" class="h2 custom-font-bold"></Label>
+                                <Label text="Enter your email or mobile number for the verification process, we will send 4 digit code to your given Email or mobile number" horizontalAlignment="left" width="90%" class="text custom-font" textWrap="true"></Label>
+                            </StackLayout>
+
+                            <StackLayout row="3" class="brand-signin-container" verticalAlignment="center">
+                                <Button class="signin-button email" (tap)="enteremail()">
+                                    <FormattedString>
+                                        <Span text="   &#xf0e0;" class="far icon"></Span>
+                                        <Span text="       Via E-mail" class="custom-font via"></Span>
+                                    </FormattedString>
+                                </Button>
+
+                                <!-- <Button class="signin-button email" (tap)="enternumber()" marginTop="20dp">
+                                    <FormattedString>
+                                        <Span text="   &#xf095;" class="far icon"></Span>
+                                        <Span text="       Via Contact Number" class="custom-font via"></Span>
+                                    </FormattedString>
+                                </Button> -->
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </ScrollView>
+            </AbsoluteLayout>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

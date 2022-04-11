@@ -1,0 +1,67 @@
+<ScrollView style="background-color: white;">
+    <GridLayout rows="50,150,100,*,100,100" class="firstgrid">
+
+
+
+        <StackLayout row="0">
+            <Label text="&#xf060;" class="fas backarrow" (tap)="Goback()"></Label>
+        </StackLayout>
+        <StackLayout row="1" class="brand-logo-container" verticalAlignment="center">
+            <Image src="~/assets/images/brand-logo.png" verticalAlignment="center"></Image>
+        </StackLayout>
+
+        <StackLayout row="2" class="brand-name-container">
+            <Label text="Create Password," class="h2 custom-font-bold"></Label>
+            <Label text="Set the password for your account so you can login and access all the features." width="80%" horizontalAlignment="left" textWrap="true" class="text"></Label>
+        </StackLayout>
+
+        <StackLayout row="3" class="brand-textfield-container">
+
+            <!-- <GridLayout class="username">
+                <TextField verticalAlignment="center" hint="Email Id/Mobile No" style.placeholderColor="gray" [(ngModel)]="username" #usernameng="ngModel" returnKeyType="next"></TextField>
+            </GridLayout> -->
+            <StackLayout rows="30,*">
+                <Label row="0" colspan="2" class="custom-font textfield-title" text="Password" horizontalAlignment="left"></Label>
+                <GridLayout row="1" columns="*, auto" class="password">
+
+                    <TextField col="0" [(ngModel)]="password" #passwordng="ngModel" verticalAlignment="center" style.placeholderColor="gray" [secure]="securePassword" returnKeyType="next"></TextField>
+                    <Label col="1" class="page-icon far" style="font-size: 15dp;" [text]="securePassword ? '&#xf070;' : '&#xf06e;'" verticalAlignment="center" (tap)="toggleShow()"></Label>
+                </GridLayout>
+            </StackLayout>
+
+
+            <GridLayout columns="*, auto">
+                <Label text="Password Guide" class="password-guide" verticalAlignment="center" horizontalAlignment="left"></Label>
+                <Switch checked="true" (checkedChange)="onCheckedChange($event)" color="#256EEB" backgroundColor="gray" offBackgroundColor="black" horizontalAlignment="right"></Switch>
+            </GridLayout>
+
+
+            <GridLayout orientation="vertical" rows="*,*,*,*,*" columns="*" class="brand-password-guide-container" *ngIf="isChecked">
+                <Label row="0" text=" Password must have a minimum 8 number of characters includes," width="80%" class="guide" horizontalAlignment="left" textWrap="true"></Label>
+                <Label row="1" text="1 capital letter" horizontalAlignment="left" textWrap="true" class="guide"></Label>
+                <Label row="2" text="1 small letter" horizontalAlignment="left" textWrap="true" class="guide"></Label>
+                <Label row="3" text="1 numeric letter (0-9)" horizontalAlignment="left" textWrap="true" class="guide"></Label>
+                <Label row="4" text="1 special character (!, @, *, %, etc.)" horizontalAlignment="left" class="guide" textWrap="true"></Label>
+            </GridLayout>
+
+
+            <StackLayout rows="30,*" marginTop="5dp">
+                <Label row="0" colspan="2" class="custom-font textfield-title" text="Re-Enter Password" horizontalAlignment="left"></Label>
+                <GridLayout row="1" columns="*, auto" class="password">
+                    <TextField col="0" [(ngModel)]="password2" #password2ng="ngModel" verticalAlignment="center" style.placeholderColor="gray" secure="true" returnKeyType="done"></TextField>
+                </GridLayout>
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout row="4" orientation="vertical" class="brand-signin-container">
+            <Button text="Continue" class="signin-button" (tap)="onregister()"> </Button>
+        </StackLayout>
+
+        <StackLayout row="5" class=" accounttext" orientation="horizontal" horizontalAlignment="center" verticalAlignment="bottom">
+            <Label text="Already have an account?" class="signinwithacc"> </Label>
+            <Label text=" Sign In" (tap)="onsignin()" class="signinwithacc1"> </Label>
+
+        </StackLayout>
+    </GridLayout>
+</ScrollView>

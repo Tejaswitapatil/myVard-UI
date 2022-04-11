@@ -1,0 +1,35 @@
+<ScrollView style="background-color: white;">
+    <GridLayout rows="50,200,100,*,150,100" class="firstgrid">
+
+
+        <StackLayout row="0">
+            <Label text="&#xf060;" class="fas backarrow" (tap)="Goback()"></Label>
+        </StackLayout>
+        <StackLayout row="1" class="brand-logo-container" verticalAlignment="center">
+            <Image src="~/assets/images/brand-logo.png" verticalAlignment="center"></Image>
+        </StackLayout>
+
+        <StackLayout row="2" class="brand-name-container">
+
+            <Label text="Enter Email Address," class="h2 custom-font-bold"></Label>
+            <Label text="Please enter your Email ID or contact number" horizontalAlignment="left" width="60%" class="text" textWrap="true"></Label>
+        </StackLayout>
+        <StackLayout row="3" class="brand-textfield-container">
+            <GridLayout class="username" rows="30,*">
+                <Label row="0" class="custom-font textfield-title" text="Email Id/Mobile No" horizontalAlignment="left"></Label>
+                <TextField row="1" keyboardType="email" verticalAlignment="center" style.placeholderColor="gray" [(ngModel)]="username" #usernameng="ngModel" returnKeyType="done"></TextField>
+            </GridLayout>
+
+        </StackLayout>
+        <StackLayout row="4" class="brand-signin-container">
+            <Button text="Get OTP" class="signin-button" (tap)="onGetOTP()"> </Button>
+        </StackLayout>
+
+        <StackLayout row="5" class=" accounttext" orientation="horizontal" horizontalAlignment="center" verticalAlignment="bottom">
+            <Label text="Don't have an account?" class="signinwithacc"> </Label>
+            <Label text=" Sign Up" class="signinwithacc1" (tap)="onsignup()"> </Label>
+
+        </StackLayout>
+
+    </GridLayout>
+</ScrollView>

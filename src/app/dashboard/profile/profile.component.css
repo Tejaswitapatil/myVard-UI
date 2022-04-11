@@ -1,0 +1,92 @@
+.main {
+    background-color: var(--primary);
+}
+
+.main-1 {
+    padding: 30% 0 30px 30px;
+    height: 100%;
+}
+
+.fab-button {
+    height: 70;
+    width: 70;
+    margin: 15;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    horizontal-align: right;
+    vertical-align: bottom;
+}
+
+.brand-category-container {
+    padding: 20dp;
+}
+
+.brand-profileimg-container {
+    border-radius: 100%;
+    height: 120dp;
+    width: 120dp;
+    border-width: 2dp;
+    border-color: #dcdddf;
+    margin: 15dp 0;
+}
+
+.brand-profileimg-container Image {
+    height: 120dp;
+    width: 120dp;
+    border-radius: 100%;
+}
+
+.brand-category-container .name {
+    font-size: 16dp;
+    font-weight: 700;
+    color: black;
+    font-family: open sans;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 16dp;
+    color: black;
+    margin: 20dp 0;
+    border-top-width: 1dp;
+    border-color: var(--primary);
+    padding: 20dp 0 10dp 0;
+}
+
+.profiledetails {
+    font-size: 15dp;
+    font-weight: 700;
+    color: black;
+}
+
+.brand-profiledetails-container {
+    /* background-color: pink; */
+    border-width: 1dp;
+    border-radius: 10dp;
+    border-color: gray;
+    height: 60dp;
+    margin: 10dp 0;
+}
+
+.profile-icon {
+    font-size: 20dp;
+    font-weight: 700;
+    color: var(--secondary);
+    padding: 10dp 10dp 10dp 20dp;
+}
+
+.profile-icon-missing {
+    font-size: 20dp;
+    font-weight: 700;
+    color: red;
+    padding: 10dp 10dp 10dp 20dp;
+}
+
+.camera-icon {
+    background-color: var(--fourth);
+    color: white;
+    padding: 5dp;
+    border-radius: 100%;
+    font-size: 15dp;
+    text-align: center;
+}
